@@ -1,0 +1,62 @@
+$red: #F23D4C !default;
+$blue: #247AF2 !default;
+$green: #30BE5F !default;
+$dark: #000 !default;
+$gray: #999 !default;
+
+$min-contrast-ratio: 3 !default;
+
+$font-family-base: 'NanumSquare', 'NanumGothic', system-ui, -apple-system, arial !default;
+
+$line-height-base: 1.5 !default;
+
+$font-size-base: .875rem !default;
+
+$body-color: $dark !default;
+$border-color: #ccc !default;
+
+$link-color: $dark !default;
+$link-decoration: none !default;
+
+$component-active-bg: $dark !default;
+
+$form-label-font-weight: 700 !default;
+
+$form-check-min-height: 1rem !default;
+$form-check-margin-bottom: 0 !default;
+$form-check-input-width: 1.14286em !default;
+$form-check-input-border-radius: 0 !default;
+
+$input-btn-padding-y: .5rem !default;
+$input-btn-focus-width: .175rem !default;
+$input-btn-focus-box-shadow: none !default;
+
+$input-font-weight: 700 !default;
+$input-placeholder-color: #999 !default;
+$input-disabled-color: #555 !default;
+$input-disabled-bg: #eee !default;
+$input-focus-border-color: $dark !default;
+
+$input-btn-padding-y-lg: .782rem !default;
+$input-btn-font-size-lg: $font-size-base;
+
+$form-select-indicator: url('../images/select.svg') !default;
+$form-select-bg-size: 20px 20px !default;
+$form-select-focus-box-shadow: none !default;
+
+$btn-disabled-opacity: .5 !default;
+
+$breadcrumb-divider: quote(">") !default;
+
+$headings-margin-bottom: 0 !default;
+
+$paragraph-margin-bottom: 0 !default;
+
+$table-striped-bg-factor: .025 !default;
+$table-striped-order: even !default;
+$table-border-color: $border-color !default;
+$table-hover-bg: rgba(243, 44, 71, .05) !default;
+
+$modal-inner-padding: 1.25rem !default;
+
+$badge-font-size: .85em !default;

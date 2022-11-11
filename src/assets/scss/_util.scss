@@ -1,0 +1,13 @@
+.login{
+  display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;background: #000;padding: 60px;
+  h1{
+    img{vertical-align: top;}
+  }
+  .login-form{
+    width: 520px;background: #fff;margin-left: 120px;padding: 60px;
+    h2{font-size: 20px;font-weight: 900;margin-bottom: 40px;}
+    .form-label{font-weight: 900;}
+    .form-check-label{font-size: 12px;font-weight: 700;}
+    .btn-lg{margin-top: 40px;}
+  }
+}

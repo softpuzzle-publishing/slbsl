@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/html/_include/_head.html')
+  </head>
+
+  <body>
+    <div class="login">
+      <h1><img src="@@webRoot/assets/images/logo.svg" alt="SLASH B SLASH" /></h1>
+      <div class="login-form">
+        <h2>Admin Page</h2>
+        <form>
+          <div class="form-group">
+            <label for="userId" class="form-label mb-0">ID</label>
+            <input type="text" class="form-control line-type" placeholder="아이디를 입력해주세요." id="userId" />
+          </div>
+          <div class="form-group">
+            <label for="userPassword" class="form-label mb-0">Password</label>
+            <input type="password" class="form-control line-type" placeholder="비밀번호를 입력해주세요." id="userPassword" />
+          </div>
+          <div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="idSave" />
+              <label class="form-check-label" for="idSave">아이디 기억하기</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-dark btn-lg w-100">Login</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

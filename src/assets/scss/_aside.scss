@@ -1,0 +1,65 @@
+.sidebar-brand{
+  height: 95px;display: flex;align-items: center;justify-content: center;padding: 0 20px;
+  img{max-width: 100%;}
+}
+
+[class^=icon-sidebar-]{
+  width: 40px;height: 40px;margin-left: 10px;transform: translateY(-1px);
+  &.icon-sidebar-home{background-image: url('../images/icon-sidebar-home.svg');}
+  &.icon-sidebar-user{background-image: url('../images/icon-sidebar-user.svg');}
+  &.icon-sidebar-theme{background-image: url('../images/icon-sidebar-theme.svg');}
+  &.icon-sidebar-lock{background-image: url('../images/icon-sidebar-lock.svg');}
+  &.icon-sidebar-bell{background-image: url('../images/icon-sidebar-bell.svg');}
+  &.icon-sidebar-chart{background-image: url('../images/icon-sidebar-chart.svg');}
+  &.icon-sidebar-notice{background-image: url('../images/icon-sidebar-notice.svg');}
+  &.icon-sidebar-terms{background-image: url('../images/icon-sidebar-terms.svg');}
+  &.icon-sidebar-admin{background-image: url('../images/icon-sidebar-admin.svg');}
+}
+.sidebar{max-height: 100%;overflow-y: auto;}
+.sidebar-nav{
+  $show-color: rgba(0,0,0,0.2);
+  a{
+    display: flex;align-items: center;white-space: nowrap;color: #fff;text-decoration: none;height: 40px;
+  }
+  > li{
+    &.has-treeview{
+      > a{
+        justify-content: space-between; 
+        &::after{
+          content: '';display: block;width: 40px;height: 40px; background: url('../images/icon-sidebar-arrow.svg') no-repeat 0 0;
+        }
+      }
+    }
+  }
+  .second-level{
+    display: none;padding: 5px 0;
+    > li{
+      > a{padding-left: 50px;} 
+    }
+  }
+  li.active{
+    > a{
+      .material-icons{transform:rotate(180deg);}
+    }
+    .second-level{display: block;}
+  }
+  li.show{
+    > a{
+      background: $show-color;color: #fff;
+      .material-icons{transform:rotate(180deg);color: #fff;}
+    }
+    .second-level{
+      background: $show-color;border-color: #999;display: block;
+      a{color: #fff;background: $show-color;}
+    }
+    &.active{
+      .second-level{display: block;}
+    }
+    &:not(.active){
+      .second-level{display: none;}
+      > a{
+        .material-icons{transform: none;}
+      }
+    }
+  }
+}

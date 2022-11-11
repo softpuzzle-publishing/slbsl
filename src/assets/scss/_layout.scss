@@ -1,0 +1,31 @@
+$body-min-width: 1400px;
+$sidebar-width: 200px;
+
+html,
+body,
+#wrap,
+#container{min-height: 100vh;}
+
+.container,
+.container-fluid{
+  padding-left: 60px;padding-right: 60px;
+}
+
+body{min-width: $body-min-width;}
+
+#header{
+  background: $danger;
+  background: linear-gradient(90deg, $danger 0%, rgba(245,128,36,1) 100%);
+  .log{color: #fff;margin-right: 1rem;}
+}
+
+#container{display: flex;}
+
+#aside{
+  width: $sidebar-width;flex: 0 0 $sidebar-width;height: 100vh;background: #000;border-right: 1px solid $border-color;
+}
+
+#main{
+  padding: 40px 0;
+  flex-grow: 1;
+}
