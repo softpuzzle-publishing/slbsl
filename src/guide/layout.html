@@ -11,46 +11,95 @@
         <main id="main">
           <div class="container-fluid">
             <!-- 페이지 타이틀 영역 -->
-            <div class="page-top">
-              <h1 class="page-title">Page Title</h1>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><span class="material-icons">home</span></li>
-                  <li class="breadcrumb-item">경로1</li>
-                  <li class="breadcrumb-item active" aria-current="page">경로2</li>
-                </ol>
-              </nav>
-            </div>
+            @@include('@@webRoot/html/_include/_page_top.html', { "title" : "회원정보", "breadcrumb": { "dep2": "가입회원" } })
             <!-- //페이지 타이틀 영역 -->
 
             <!-- 필터 영역 -->
             <div class="filter-area">
-              <div class="row justify-content-center">
-                <label class="col-auto col-form-label">일정</label>
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">가입일</div>
                 <div class="col-auto">
-                  <input type="text" class="form-control" placeholder="YYYY-MM-DD" data-picker="date" />
+                  <div class="row g-2 align-items-center">
+                    <div class="col-auto">
+                      <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                    </div>
+                    <div class="col-auto">~</div>
+                    <div class="col-auto">
+                      <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                    </div>
+                  </div>
                 </div>
-                <label class="col-auto col-form-label">건물</label>
                 <div class="col-auto">
                   <select class="form-select">
-                    <option value="">건물을 선택해주세요</option>
+                    <option value="">닉네임</option>
                   </select>
                 </div>
                 <div class="col-auto">
-                  <button type="button" class="btn btn-danger">조회하기</button>
+                  <input type="text" class="form-control" placeholder="키워드를 입력하세요" style="width: 400px" />
+                </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-dark" style="min-width: 80px">검색</button>
                 </div>
               </div>
             </div>
             <!-- //필터 영역 -->
-
-            <div class="row align-items-end justify-content-between mt-40px mb-10px">
-              <div class="col-auto">
-                <div class="section-title">Section Title</div>
-              </div>
-              <div class="col-auto">
-                <div class="unit">(단위:원)</div>
+            <!-- table 상단 -->
+            <div class="table-top">
+              <div class="row align-items-end justify-content-between">
+                <div class="col-auto">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                      <select class="form-select">
+                        <option value="">10개</option>
+                        <option value="">30개</option>
+                        <option value="">50개</option>
+                        <option value="">100개</option>
+                      </select>
+                    </div>
+                    <div class="col-auto">294 - 324 / 324</div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-outline-dark" style="min-width: 160px">엑셀 다운로드</button>
+                </div>
               </div>
             </div>
+            <!-- //table 상단 -->
+            <!-- table -->
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th class="text-center">
+                    <input type="checkbox" class="form-check-input m-0 align-middle" />
+                  </th>
+                  <th class="text-start">닉네임</th>
+                  <th class="text-start">이름</th>
+                  <th class="text-start">아이디</th>
+                  <th class="text-start">이메일</th>
+                  <th class="text-start">가입경로</th>
+                  <th class="text-start">가입일</th>
+                  <th class="text-start">최종로그인일</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for (var i = 10; i > 0; i--) {
+                <tr>
+                  <td class="text-center">
+                    <input type="checkbox" class="form-check-input m-0 align-middle" />
+                  </td>
+                  <td class="text-start">alpaca</td>
+                  <td class="text-start">정용채</td>
+                  <td class="text-start">iamalpa</td>
+                  <td class="text-start">slashbslash@gmail.com</td>
+                  <td class="text-start">SLASH B SLASH 계정</td>
+                  <td class="text-start">2022.10.20</td>
+                  <td class="text-start">2022.10.20</td>
+                </tr>
+                }
+              </tbody>
+            </table>
+            <!-- //table -->
+            @@include('@@webRoot/html/_include/_pagination.html')
           </div>
           <!-- //container-fluid -->
         </main>

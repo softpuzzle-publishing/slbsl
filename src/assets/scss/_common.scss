@@ -1,5 +1,5 @@
 .col,
-.col-auto{min-width: 1}
+.col-auto{min-width: 0;}
 
 .form-group{margin-bottom: 20px;}
 
@@ -14,7 +14,7 @@
 .btn-lg{font-weight: 900;}
 
 .ui-widget.ui-datepicker{
-  width: 339px;padding: 24px 30px 29px 29px;
+  width: 339px;padding: 25px;border-color: $border-color;
   .ui-widget-header{background: #fff;border: 0;}
   .ui-state-default{border: 0;}
   td span,
@@ -41,11 +41,27 @@
   select.ui-datepicker-month{margin-left: 12px;}
 }
 
-[data-picker="date"]{
+.tempus-dominus-widget.timepicker-sbs{
+  width: 340px !important;padding: 25px;border: 1px solid $border-color;border-radius: 3px;box-shadow: none;
+  .td-row{
+    flex-direction: column;
+    .td-half{width: 100%;}
+  }
+}
+
+[data-picker="date"],
+[data-picker="datetime"]{
   background-image: url('../images/icon-calendar.svg'); background-repeat: no-repeat; background-position: right .75rem top 50%;
-  width: 140px;display: inline-block;
+  width: 150px;display: inline-block;
   & ~ img{vertical-align: middle;margin-left: 5px;cursor: pointer;}
 }
+[data-picker="datetime"]{
+  width: 200px;
+}
+[data-picker="color"]{
+  width: 110px;
+}
+.sp-original-input-container .sp-add-on{border: 0 !important;}
 
 .material-icons{
   overflow: hidden;
@@ -58,13 +74,12 @@
 }
 
 .page-top{
-  display: flex;align-items: flex-end;justify-content: space-between;
-  border-bottom: 1px solid #000;padding-bottom: 16px;margin-bottom: 32px;
+  display: flex;align-items: flex-end;justify-content: space-between;margin-bottom: 40px;
+  .page-title{
+    font-size: 20px;font-weight: 900;
+  }
 }
 
-.page-title{
-  font-size: 24px;font-weight: 700;
-}
 
 .section-title{
   font-size: 16px;font-weight: 700;
@@ -72,12 +87,21 @@
 
 .breadcrumb{
   align-items: center;
-  .breadcrumb-item{color: #888;}
+  .breadcrumb-item{
+    color: #666;line-height: 20px;font-weight: 700;
+    &:last-of-type{color: #333;}
+    & + .breadcrumb-item{
+      padding-left: 0;
+      &::before{
+        content: '';background: url('../images/breadcrumb.svg') 0 0 no-repeat;width: 20px;height: 20px;padding-right: 0;display: inline-block;vertical-align: middle;float: none;transform: translateY(-1px);
+      }
+    }      
+  }
   .material-icons{font-size: 16px;vertical-align: middle;transform: translateY(-1px);}
 }
 
 .filter-area{
-  border: 1px solid $border-color;background: #f9f9f9;padding: 40px 0;
+  border-bottom: 1px solid $border-color;padding: 0 0 20px;margin-bottom: 20px;
   .col-form-label{width: 70px;}
 }
 
@@ -90,14 +114,18 @@
 
 .unit{font-size: 13px;font-weight: 500;}
 
+.table-top{
+  margin-bottom: 20px;
+}
+
 .table{
-  border-top: 1px solid $border-color;
-  th{font-weight: 500;}
+  border-top: 1px solid $border-color;font-weight: 700;
+  th{font-weight: 700;}
   thead{
-    th{background: #f9f9f9;}
+    th{background: #f5f5f5;}
   }
   tbody{
-    th{background: #f9f9f9;}
+    th{background: #f5f5f5;}
     th,
     td{vertical-align: middle;}
   }
@@ -109,6 +137,7 @@
 }
 
 .pagination{
+  margin-top: 40px;
   .page-link{
     width: 40px;height: 40px;padding: 0;display: flex;align-items: center;justify-content: center;border: 0;font-weight: 700;font-size: 13px;
     &:hover{text-decoration: none;background: rgba(0,0,0,0.05);}

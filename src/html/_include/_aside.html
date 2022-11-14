@@ -2,19 +2,20 @@
   <div class="sidebar-brand">
     <img src="@@webRoot/assets/images/logo.svg" alt="SLASH B SLASH1" />
   </div>
-  <nav class="sidebar">
+  <nav class="sidebar-nav-wrap">
     <ul class="sidebar-nav">
       <li>
         <a href="@@webRoot/html/dashboard/dashboard.html">
           <span><i class="icon-sidebar-home"></i>대시보드</span>
         </a>
       </li>
-      <li class="has-treeview active">
+      <li class="has-treeview active show">
+        <!-- 현재 페이지 .active.show -->
         <a href="#none">
           <span><i class="icon-sidebar-user"></i>회원정보</span>
         </a>
         <ul class="second-level">
-          <li><a href="#none" class="active">가입회원</a></li>
+          <li class="active"><a href="#none">가입회원</a></li>
           <li><a href="#none">휴면회원</a></li>
           <li><a href="#none">탈퇴회원</a></li>
         </ul>
@@ -24,7 +25,10 @@
           <span><i class="icon-sidebar-theme"></i>테마</span>
         </a>
         <ul class="second-level">
-          <li><a href="#none"></a></li>
+          <li><a href="#none">Default</a></li>
+          <li><a href="#none">Original</a></li>
+          <li><a href="#none">Special</a></li>
+          <li><a href="#none">Genuine</a></li>
         </ul>
       </li>
       <li class="has-treeview">
@@ -32,7 +36,8 @@
           <span><i class="icon-sidebar-lock"></i>시리얼넘버</span>
         </a>
         <ul class="second-level">
-          <li><a href="#none"></a></li>
+          <li><a href="#none">시리얼넘버 발행</a></li>
+          <li><a href="#none">시리얼넘버 목록</a></li>
         </ul>
       </li>
       <li class="has-treeview">
@@ -40,7 +45,8 @@
           <span><i class="icon-sidebar-bell"></i>푸시알림</span>
         </a>
         <ul class="second-level">
-          <li><a href="#none"></a></li>
+          <li><a href="#none">테마 알림</a></li>
+          <li><a href="#none">공식 알림</a></li>
         </ul>
       </li>
       <li class="has-treeview">
@@ -48,7 +54,9 @@
           <span><i class="icon-sidebar-chart"></i>데이터 리포트</span>
         </a>
         <ul class="second-level">
-          <li><a href="#none"></a></li>
+          <li><a href="#none">회원 리포트</a></li>
+          <li><a href="#none">앱 리포트</a></li>
+          <li><a href="#none">테마 리포트</a></li>
         </ul>
       </li>
       <li>
@@ -61,7 +69,8 @@
           <span><i class="icon-sidebar-terms"></i>약관 및 버전</span>
         </a>
         <ul class="second-level">
-          <li><a href="#none"></a></li>
+          <li><a href="#none">서비스 이용약관</a></li>
+          <li><a href="#none">개인정보수집 및 이용</a></li>
         </ul>
       </li>
       <li>
@@ -71,4 +80,29 @@
       </li>
     </ul>
   </nav>
+  <div class="sidebar-bottom">
+    <div class="user">
+      <div class="d-flex align-items-center">
+        <div class="profile">
+          <img src="@@webRoot/assets/images/@profile.jpg" alt="" />
+        </div>
+        <div class="info">
+          <div class="name">홍길동</div>
+          <div class="role">슈퍼관리자</div>
+        </div>
+      </div>
+    </div>
+    <ul class="user-menu">
+      <li>
+        <a href="#none">
+          <span><i class="icon-sidebar-edit"></i>프로필 편집</span>
+        </a>
+      </li>
+      <li>
+        <a href="#none">
+          <span><i class="icon-sidebar-logout"></i>로그아웃</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </aside>

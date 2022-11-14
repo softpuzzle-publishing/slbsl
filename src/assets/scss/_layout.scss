@@ -22,7 +22,7 @@ body{min-width: $body-min-width;}
 #container{display: flex;}
 
 #aside{
-  width: $sidebar-width;flex: 0 0 $sidebar-width;height: 100vh;background: #000;border-right: 1px solid $border-color;
+  width: $sidebar-width;flex: 0 0 $sidebar-width;height: 100vh;background: #000;border-right: 1px solid $border-color;display: flex;flex-direction: column;
 }
 
 #main{

@@ -44,7 +44,7 @@ $form-select-indicator: url('../images/select.svg') !default;
 $form-select-bg-size: 20px 20px !default;
 $form-select-focus-box-shadow: none !default;
 
-$btn-disabled-opacity: .5 !default;
+$btn-disabled-opacity: .23 !default;
 
 $breadcrumb-divider: quote(">") !default;
 
@@ -60,3 +60,6 @@ $table-hover-bg: rgba(243, 44, 71, .05) !default;
 $modal-inner-padding: 1.25rem !default;
 
 $badge-font-size: .85em !default;
+
+$breadcrumb-font-size: 12px !default;
+$breadcrumb-margin-bottom: 0 !default;
