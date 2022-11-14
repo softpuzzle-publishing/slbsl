@@ -41,12 +41,19 @@
   select.ui-datepicker-month{margin-left: 12px;}
 }
 
-.tempus-dominus-widget.timepicker-sbs{
+.tempus-dominus-widget{
   width: 340px !important;padding: 25px;border: 1px solid $border-color;border-radius: 3px;box-shadow: none;
-  .td-row{
-    flex-direction: column;
-    .td-half{width: 100%;}
+  &.timepicker-sbs{
+    .td-row{
+      flex-direction: column;
+      .td-half{width: 100%;}
+    }
   }
+  &.dark button{
+    background-color: $gray;border-color: $gray;
+  }
+  .time-container{margin-bottom: 0;}
+  .time-container-clock{grid-auto-rows: auto;margin-top: .5rem;}
 }
 
 [data-picker="date"],
