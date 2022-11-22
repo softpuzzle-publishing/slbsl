@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top4.html', { "title" : "테마", "breadcrumb": { "dep2": "Original", "dep3": "테마 상세", "dep4": "Theme Pack (Android Only)" } })
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- table -->
+          <table class="table table-bordered">
+            <colgroup>
+              <col style="width: 200px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>타이틀</th>
+                <td>
+                  <input type="text" class="form-control" placeholder="타이틀 입력 (영문 대문자)">
+                </td>
+              </tr>
+              <tr>
+                <th>메인 이미지 (4:3)</th>
+                <td>
+                  <div class="hstack gap-4">
+                    <div class="thumbnail ratio ratio-4x3" style="width: 200px;">
+                      <!-- <img src="../../assets/images/@landscape.jpg" alt=""> -->
+                      <!-- 이미지 없을때 (아래) -->
+                      <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div>
+                    </div>
+                    <div class="vstack gap-2 justify-content-center">
+                      <input type="file" name="" id="image_upload" class="visually-hidden">
+                      <label for="image_upload" class="btn btn-dark width-150px">이미지 업로드</label>
+                      <button type="button" class="btn btn-outline-dark width-150px">이미지 삭제</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>APK 파일 업로드</th>
+                <td>
+                  <div class="hstack gap-2">
+                    <input type="file" class="form-control" id="fileUpLoad" style="width: 300px">
+                    <button type="button" class="btn btn-outline-dark">삭제</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>테마스토어 링크</th>
+                <td>
+                  <input type="text" class="form-control" placeholder="갤럭시 테마 스토어 링크 입력">
+                </td>
+              </tr>
+              <tr>
+                <th>배포상태</th>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
+                    <label class="form-check-label" for="flexRadioDefault1">미배포</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                    <label class="form-check-label" for="flexRadioDefault2">배포</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- //table -->
+
+          <div class="d-flex gap-2  mt-5">
+            <button type="button" class="btn btn-secondary width-150px">취소</button>
+            <button type="button" class="btn btn-dark width-150px">저장</button>
+          </div>
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+<script>
+ 
+</script>
+
+</html>

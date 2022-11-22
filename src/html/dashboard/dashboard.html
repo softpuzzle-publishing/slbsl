@@ -1,20 +1,184 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    @@include('@@webRoot/html/_include/_head.html')
-  </head>
 
-  <body>
-    <div id="wrap">
-      <div id="container">
-        @@include('@@webRoot/html/_include/_aside.html')
-        <main id="main" class="dashboard">
-          <div class="container-fluid"></div>
-          <!-- //container-fluid -->
-        </main>
-        <!-- //main -->
-      </div>
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main" class="dashboard">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          <!-- @@include('@@webRoot/html/_include/_page_top.html', { "title" : "회원정보", "breadcrumb": { "dep2": "가입회원" } }) -->
+          <!-- //페이지 타이틀 영역 -->
+          <div class="dashboard-wrap d-grid gap-4">
+            <div class="dashboard-area d-grid gap-3">
+              <div class="bg-dark text-white p-3 fs-5">ACCOUNT</div>
+              <div class="border border-dark px-3 py-4 hstack justify-content-between">
+                <span class="font-size-16px">전체 회원 수</span>
+                <div class="vstack col-auto align-items-end">
+                  <div class="fs-3 fw-bold">2,678,092</div>
+                  <div class="count-state text-danger hstack gap-2 justify-content-end"> <i class="fa-solid fa-caret-up"></i> 20</div>
+                </div>
+              </div>
+              <div class="detail-card-list">
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">가입 회원 수</span>
+                    <div class="fs-3 fw-bold">2,678,070</div>
+                    <div class="count-state text-danger hstack gap-2 justify-content-center"> <i class="fa-solid fa-caret-up"></i> 32</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">휴면 회원 수</span>
+                    <div class="fs-3 fw-bold">4</div>
+                    <div class="count-state text-primary hstack gap-2 justify-content-center"> <i class="fa-solid fa-caret-down"></i> 4</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">탈퇴 회원 수</span>
+                    <div class="fs-3 fw-bold">10</div>
+                    <div class="count-state text-danger hstack gap-2 justify-content-center"> <i class="fa-solid fa-caret-up"></i> 3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard-area d-grid gap-3">
+              <div class="bg-dark text-white p-3 fs-5">THEME</div>
+              <div class="border border-dark px-3 py-4 hstack justify-content-between">
+                <span class="font-size-16px">전체 테마 수</span>
+                <div class="vstack col-auto align-items-end">
+                  <div class="fs-3 fw-bold">40</div>
+                  <div class="count-state text-danger hstack gap-2 justify-content-end"> <i class="fa-solid fa-caret-up"></i> 20</div>
+                </div>
+              </div>
+              <div class="detail-card-list">
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Original</span>
+                    <div class="fs-3 fw-bold">25</div>
+                    <div class="count-state text-danger hstack gap-2 justify-content-center"> <i class="fa-solid fa-caret-up"></i> 25</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Special</span>
+                    <div class="fs-3 fw-bold">10</div>
+                    <div class="count-state text-black-50 hstack gap-2 justify-content-center"> <i class="fa-solid fa-minus"></i> 0</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Genuine</span>
+                    <div class="fs-3 fw-bold">5</div>
+                    <div class="count-state text-danger hstack gap-2 justify-content-center"> <i class="fa-solid fa-caret-up"></i> 5</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard-area d-grid gap-3">
+              <div class="bg-dark text-white p-3 fs-5">CONTENTS CARD</div>
+              <div class="detail-card-list whide">
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">전체 컨텐츠 카드 수</span>
+                    <div class="fs-3 fw-bold">137</div>
+                    <div class="count-state text-danger hstack gap-2 justify-content-center"> <i class="fa-solid fa-caret-up"></i> 137</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Wallpaper</span>
+                    <div class="fs-3 fw-bold">56</div>
+                    <div class="count-state text-danger hstack gap-2 justify-content-center"> <i class="fa-solid fa-caret-up"></i> 1</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Widget</span>
+                    <div class="fs-3 fw-bold">21</div>
+                    <div class="count-state text-danger hstack gap-2 justify-content-center"> <i class="fa-solid fa-caret-up"></i> 2</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Icon Pack</span>
+                    <div class="fs-3 fw-bold">12</div>
+                    <div class="count-state text-danger hstack gap-2 justify-content-center"> <i class="fa-solid fa-caret-up"></i> 1</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Theme Pack</span>
+                    <div class="fs-3 fw-bold">18</div>
+                    <div class="count-state text-black-50 hstack gap-2 justify-content-center"><i class="fa-solid fa-minus"></i> 0</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Sound</span>
+                    <div class="fs-3 fw-bold">5</div>
+                    <div class="count-state text-black-50 hstack gap-2 justify-content-center"> <i class="fa-solid fa-minus"></i> 0</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Video</span>
+                    <div class="fs-3 fw-bold">4</div>
+                    <div class="count-state text-black-50 hstack gap-2 justify-content-center"> <i class="fa-solid fa-minus"></i> 0</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">AR Camera</span>
+                    <div class="fs-3 fw-bold">7</div>
+                    <div class="count-state text-black-50 hstack gap-2 justify-content-center"> <i class="fa-solid fa-minus"></i> 0</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Shop</span>
+                    <div class="fs-3 fw-bold">0</div>
+                    <div class="count-state text-black-50 hstack gap-2 justify-content-center"> <i class="fa-solid fa-minus"></i> 0</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Magazine</span>
+                    <div class="fs-3 fw-bold">0</div>
+                    <div class="count-state text-black-50 hstack gap-2 justify-content-center"> <i class="fa-solid fa-minus"></i> 0</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Event</span>
+                    <div class="fs-3 fw-bold">1</div>
+                    <div class="count-state text-danger hstack gap-2 justify-content-center"> <i class="fa-solid fa-caret-up"></i> 1</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class=" vstack justify-content-center align-items-center">
+                    <span class="font-size-16px">Notice</span>
+                    <div class="fs-3 fw-bold">1</div>
+                    <div class="count-state text-danger hstack gap-2 justify-content-center"> <i class="fa-solid fa-caret-up"></i> 1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
     </div>
-    @@include('@@webRoot/html/_include/_modal.html')
-  </body>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
 </html>

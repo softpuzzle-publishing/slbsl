@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top_form.html', { "title" : "시리얼넘버", "breadcrumb": { "dep2": "시리얼넘버 발행","dep3": "발행체계 생성" } })
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- table -->
+          <table class="table table-bordered">
+            <colgroup>
+              <col style="width: 200px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>발행체계 옵션</th>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="serial_issuance" id="serial_option_01" value="original" checked />
+                    <label class="form-check-label" for="serial_option_01">Original/Collaboration</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="serial_issuance" id="serial_option_02" value="certification" />
+                    <label class="form-check-label" for="serial_option_02">Certification (정품인증용)</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+
+            <!-- Original/Collaboration 테이블  -->
+            <tbody id="serial_option_original">
+              <tr>
+                <th>연동 테마</th>
+                <td>
+                  <button type="button" class="btn btn-outline-dark" data-bs-target="#modal-serial-original-tema" data-bs-toggle="modal">테마 선택</button>
+                </td>
+              </tr>
+              <tr>
+                <th>발행체계</th>
+                <td>
+                  <input type="text" class="form-control" placeholder="시리얼넘버 발행체계 입력 (영문숫자 조합의 코드)" style="width: 400px;">
+                </td>
+              </tr>
+              <tr>
+                <th>타입 선택</th>
+                <td>
+                  <select name="" id="" class="form-select" style="width: 400px;">
+                    <option value="">랜덤</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>활성가능 디바이스 수</th>
+                <td>
+                  <div class="hstack gap-2">
+                    <input type="text" class="form-control" style="width: 400px;"><span>*시리얼넘버 1개당 NFC 인증 가능한 디바이스 수</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <!-- Original/Collaboration 테이블 끝 -->
+
+
+            <!-- Certification (정품인증용) 테이블  -->
+            <tbody id="serial_option_certification" style="display: none;">
+              <tr>
+                <th>연동 테마</th>
+                <td>
+                  <button type="button" class="btn btn-outline-dark" data-bs-target="#modal-serial-certification-tema" data-bs-toggle="modal">테마 선택</button>
+                </td>
+              </tr>
+              <tr>
+                <th>제품/작품 시리얼</th>
+                <td>
+                  <div class="hstack gap-2">
+                    <input type="file" class="form-control" id="fileUpLoad" style="width: 300px">
+                    <button type="button" class="btn btn-outline-dark">삭제</button>
+                    <span>*엑셀 파일 업로드</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>발행체계</th>
+                <td>
+                  <input type="text" class="form-control" placeholder="시리얼넘버 발행체계 입력 (영문숫자 조합의 코드)" style="width: 400px;">
+                </td>
+              </tr>
+              <tr>
+                <th>타입 선택</th>
+                <td>
+                  <select name="" id="" class="form-select" style="width: 400px;">
+                    <option value="">랜덤</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+            </tbody>
+            <!-- Certification (정품인증용) 테이블 끝 -->
+
+            <!-- 공통 테이블  -->
+            <tbody>
+              <tr>
+                <th>NFC 인증 유효일</th>
+                <td>
+                  <div class="hstack gap-2">
+                    <input type="text" class="form-control" style="width: 400px;"><span>*NFC 인증 가능한 일수 (ex. 365일)</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>서비스 유효기간</th>
+                <td>
+                  <div class="hstack gap-2">
+                    <input type="text" class="form-control" style="width: 400px;"><span>*NFC 인증 후 테마 사용가능 기간 (입력한 날짜까지)</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <!-- 공통 테이블 끝 -->
+          </table>
+          <!-- // table -->
+
+          <div class="d-flex gap-2  mt-5">
+            <button type="button" class="btn btn-secondary width-150px">취소</button>
+            <button type="button" class="btn btn-dark width-150px">생성</button>
+          </div>
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+<script>
+  $('input[name="serial_issuance"]').change(function () {
+    if ($('input[name="serial_issuance"]:checked').val() === "original") {
+      $('#serial_option_certification').hide();
+      $('#serial_option_original').show();
+    } else {
+      $('#serial_option_certification').show();
+      $('#serial_option_original').hide();
+    }
+  });
+</script>
+
+</html>

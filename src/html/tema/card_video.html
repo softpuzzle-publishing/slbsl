@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top4.html', { "title" : "테마", "breadcrumb": { "dep2": "Original", "dep3": "테마 상세", "dep4": "Video" } })
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- table -->
+          <table class="table table-bordered">
+            <colgroup>
+              <col style="width: 200px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>타이틀</th>
+                <td>
+                  <input type="text" class="form-control" placeholder="타이틀 입력 (영문 대문자)">
+                </td>
+              </tr>
+              <tr>
+                <th>비디오</th>
+                <td>
+                  <div class="vstack gap-2">
+                    <div class="hstack gap-2">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="card_video_upload" id="flexRadioDefault1" value="video_upload" checked/>
+                        <label class="form-check-label" for="flexRadioDefault1">비디오 파일 업로드</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="card_video_upload" id="flexRadioDefault2" />
+                        <label class="form-check-label" for="flexRadioDefault2">YouTube</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="card_video_upload" id="flexRadioDefault3" />
+                        <label class="form-check-label" for="flexRadioDefault3">Vimeo</label>
+                      </div>
+                    </div>
+                    
+                    <!-- 비디오 파일업로드 선택시 -->
+                    <div class="hstack gap-2" id="video_upload">
+                      <input type="file" class="form-control" id="fileUpLoad" style="width: 300px">
+                      <button type="button" class="btn btn-outline-dark">삭제</button>
+                    </div>
+
+                    <!-- 이외 선택시 -->
+                    <input type="text" class="form-control" id="url_form" placeholder="영상 URL 입력" style="display: none;">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>배포상태</th>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
+                    <label class="form-check-label" for="flexRadioDefault1">미배포</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                    <label class="form-check-label" for="flexRadioDefault2">배포</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- //table -->
+
+          <div class="d-flex gap-2  mt-5">
+            <button type="button" class="btn btn-secondary width-150px">취소</button>
+            <button type="button" class="btn btn-dark width-150px">저장</button>
+          </div>
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+<script>
+  $('input[name="card_video_upload"]').change(function () {
+    if ($('input[name="card_video_upload"]:checked').val() === "video_upload") {
+      $('#url_form').hide();
+      $('#video_upload').show();
+    } else {
+      $('#url_form').show();
+      $('#video_upload').hide();
+    }
+  });
+</script>
+
+</html>

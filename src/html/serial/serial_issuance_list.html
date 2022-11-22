@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top.html', { "title" : "시리얼넘버", "breadcrumb": { "dep2": "시리얼넘버 발행" } })
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- 필터 영역 -->
+          <div class="filter-area">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <select name="" id="" class="form-select">
+                  <option value="">전체 테마</option>
+                </select>
+              </div>
+              <div class="col-auto">
+                <input type="text" class="form-control" placeholder="발행체계 또는 연동 테마로 검색" style="width: 400px" />
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-dark" style="min-width: 80px">검색</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-outline-dark" style="min-width: 80px">초기화</button>
+              </div>
+            </div>
+          </div>
+          <!-- //필터 영역 -->
+          <!-- table 상단 -->
+          <div class="table-top">
+            <div class="row align-items-end justify-content-between">
+              <div class="col-auto">
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <select class="form-select">
+                      <option value="">10개</option>
+                      <option value="">30개</option>
+                      <option value="">50개</option>
+                      <option value="">100개</option>
+                    </select>
+                  </div>
+                  <div class="col-auto">294 - 324 / 324</div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-dark" style="min-width: 160px">발행체계 생성</button>
+              </div>
+            </div>
+          </div>
+          <!-- //table 상단 -->
+          <!-- table -->
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="text-start">발행체계</th>
+                <th class="text-start">연동 테마</th>
+                <th class="text-start">타입</th>
+                <th class="text-start">활성가능 디바이스 수</th>
+                <th class="text-start">NFC 인증 유효일</th>
+                <th class="text-start">서비스 유효일</th>
+                <th class="text-start">시리얼넘버 발행</th>
+              </tr>
+            </thead>
+            <tbody>
+              @@for (var i = 10; i > 0; i--) {
+              <tr>
+                <td class="text-start"><a href="">GLC02TC13CDHM0299L99L########MANGO</a></td>
+                <td class="text-start">CL Cherry On Top</td>
+                <td class="text-start">랜덤</td>
+                <td class="text-start">10</td>
+                <td class="text-start">365</td>
+                <td class="text-start">2022.10.20</td>
+                <td class="text-start">
+                  <div class="hstack gap-2">
+                    <input type="text" class="form-control width-150px" placeholder="숫자 입력">
+                    <button type="button" class="btn btn-outline-dark">시리얼넘버 발행</button>
+                  </div>
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+          <!-- //table -->
+          @@include('@@webRoot/html/_include/_pagination.html')
+
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top_form.html', { "title" : "시리얼넘버", "breadcrumb": { "dep2": "시리얼넘버 발행","dep3": "발행체계 수정" } })
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- table -->
+          <table class="table table-bordered">
+            <colgroup>
+              <col style="width: 200px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>발행체계 옵션</th>
+                <td>
+                  Original/Collaboration
+
+                  <!-- Certification (정품인증용) -->
+                </td>
+              </tr>
+            </tbody>
+
+            <!-- Original/Collaboration 테이블  -->
+            <tbody id="serial_option_original">
+              <tr>
+                <th>연동 테마</th>
+                <td>
+                  CL Cherry On Top
+                </td>
+              </tr>
+              <tr>
+                <th>발행체계</th>
+                <td>
+                  <input type="text" class="form-control" placeholder="시리얼넘버 발행체계 입력 (영문숫자 조합의 코드)" style="width: 400px;" value="GLC02TC12CDCL0199L99L########BINGO">
+                </td>
+              </tr>
+              <tr>
+                <th>타입 선택</th>
+                <td>
+                  <select name="" id="" class="form-select" style="width: 400px;">
+                    <option value="">랜덤</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>활성가능 디바이스 수</th>
+                <td>
+                  <div class="hstack gap-2">
+                    <input type="text" class="form-control" style="width: 400px;" value="10"><span>*시리얼넘버 1개당 NFC 인증 가능한 디바이스 수</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <!-- Original/Collaboration 테이블 끝 -->
+
+
+            <!-- Certification (정품인증용) 테이블  -->
+            <tbody id="serial_option_certification">
+              <tr>
+                <th>연동 테마</th>
+                <td>
+                  BOTTEGA VENETA
+                </td>
+              </tr>
+              <tr>
+                <th>제품/작품 시리얼</th>
+                <td>
+                  bottega-veneta-serial.xlsx / 1000개
+                </td>
+              </tr>
+              <tr>
+                <th>발행체계</th>
+                <td>
+                  <input type="text" class="form-control" placeholder="시리얼넘버 발행체계 입력 (영문숫자 조합의 코드)" style="width: 400px;" value="GLC02TC12CDCL0199L99L########BINGO">
+                </td>
+              </tr>
+              <tr>
+                <th>타입 선택</th>
+                <td>
+                  <select name="" id="" class="form-select" style="width: 400px;">
+                    <option value="">랜덤</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+            </tbody>
+            <!-- Certification (정품인증용) 테이블 끝 -->
+
+            <!-- 공통 테이블  -->
+            <tbody>
+              <tr>
+                <th>NFC 인증 유효일</th>
+                <td>
+                  <div class="hstack gap-2">
+                    <input type="text" class="form-control" style="width: 400px;" value="365"><span>*NFC 인증 가능한 일수 (ex. 365일)</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>서비스 유효기간</th>
+                <td>
+                  <div class="hstack gap-2">
+                    <input type="text" class="form-control" style="width: 400px;" value="2023.10.25"><span>*NFC 인증 후 테마 사용가능 기간 (입력한 날짜까지)</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <!-- 공통 테이블 끝 -->
+          </table>
+          <!-- // table -->
+
+          <div class="d-flex gap-2  mt-5">
+            <button type="button" class="btn btn-secondary width-150px">취소</button>
+            <button type="button" class="btn btn-outline-dark width-150px">삭제</button>
+            <button type="button" class="btn btn-dark width-150px">저장</button>
+          </div>
+
+          <p class="text-danger mt-4">
+            *발행체계 삭제 시 해당 발행체계로 발행된 모든 시리얼넘버가 함께 삭제됩니다.
+          </p>
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+
+</html>

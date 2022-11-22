@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top_form.html', { "title" : "테마등록", "breadcrumb": { "dep2": "Certification", "dep3": "테마 등록" } })
+          <!-- //페이지 타이틀 영역 -->
+          <!-- table -->
+          <table class="table table-bordered">
+            <colgroup>
+              <col style="width:200px">
+              <col>
+              <col style="width:200px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>썸네일 이미지 (1:1)</th>
+                <td colspan="3">
+                  <div class="hstack gap-4">
+                    <div class="thumbnail">
+                      <img src="../../assets/images/@landscape.jpg" alt="">
+                      <!-- 이미지 없을때 (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <div class="vstack gap-2 justify-content-center">
+                      <input type="file" name="" id="image_upload" class="visually-hidden">
+                      <label for="image_upload" class="btn btn-dark width-150px">이미지 업로드</label>
+                      <button type="button" class="btn btn-outline-dark width-150px">이미지 삭제</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>테마 이름</th>
+                <td colspan="3"> <input type="text" class="form-control" placeholder="테마 이름 입력"></td>
+              </tr>
+              <tr>
+                <th>메인 컬러</th>
+                <td>
+                  <input type="text" class="form-control" data-picker="color" value="#dddeea" />
+                </td>
+                <th>텍스트 컬러</th>
+                <td>
+                  <input type="text" class="form-control" data-picker="color" value="#dddeea" />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  NFC 장착 이미지<br>(png 권장)
+                </th>
+                <td>
+                  <div class="hstack gap-4">
+                    <div class="thumbnail">
+                      <img src="../../assets/images/@landscape.jpg" alt="">
+                      <!-- 이미지 없을때 (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <div class="vstack gap-2 justify-content-center">
+                      <input type="file" name="" id="image_upload" class="visually-hidden">
+                      <label for="image_upload" class="btn btn-dark width-150px">이미지 업로드</label>
+                      <button type="button" class="btn btn-outline-dark width-150px">이미지 삭제</button>
+                    </div>
+                  </div>
+                </td>
+                <th>NFC 연동 모션<br>(mov/mp4 파일)</th>
+                <td>
+                  <div class="hstack gap-2">
+                    <input type="file" class="form-control" id="fileUpLoad" style="width: 300px;">
+                    <button type="button" class="btn btn-outline-dark">삭제</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>배포상태</th>
+                <td colspan="3">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="distribute" checked="" name="distribute">
+                    <label class="form-check-label" for="distribute">배포</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="undistributed" name="distribute">
+                    <label class="form-check-label" for="undistributed">미배포</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- //table -->
+
+
+          <div class="mt-5 mb-2 fs-5 fw-bold">정품인증서</div>
+          <button type="button" class="btn btn-dark width-150px" data-bs-target="#modal-enroll-authenticity" data-bs-toggle="modal">정품인증서 등록
+          </button>
+
+          <table class="table table-bordered table-center mt-3">
+            <colgroup>
+              <col style="width: 200px;">
+              <col style="width: 200px;">
+              <col>
+              <col style="width: 200px;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="thumbnail">
+                    <img src="../../assets/images/@landscape.jpg" alt="">
+                    <!-- 이미지 없을때  (아래) -->
+                    <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                  </div>
+                </td>
+                <td class="text-start">
+                  명품
+                </td>
+                <td class="text-start">CL DIGITAL PHOTO CARD</td>
+                <td>
+                  <button type="button" class="btn btn-outline-dark" data-bs-target="#modal-detail-authenticity" data-bs-toggle="modal">상세보기</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="mt-5 mb-2 fs-5 fw-bold">컨텐츠 카드</div>
+          <table class="table table-bordered table-center" id="sortable">
+            <colgroup>
+              <col style="width: 8%;">
+              <col>
+              <col style="width: 50%;">
+              <col style="width: 8%;">
+              <col style="width: 8%;">
+              <col style="width: 8%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>노출순서</th>
+                <th>컨텐츠 카드</th>
+                <th>타이틀</th>
+                <th>배포상태</th>
+                <th>순서변경</th>
+                <th>삭제</th>
+              </tr>
+            </thead>
+            @@for (var i = 10; i > 0; i--) {
+            <tbody class="sort-table">
+              <tr>
+                <td>`+ i +`</td>
+                <td class="text-start">Theme Pack (Android Only)</td>
+                <td class="text-start"><a href="">CL DIGITAL PHOTO CARD</a></td>
+                <td>미배포</td>
+                <td>
+                  <a href="#none" class="hstack drag-icon text-decoration-none justify-content-center">
+                    <i class="fa-sharp fa-solid fa-bars"></i>
+                  </a>
+                </td>
+                <td>
+                  <a href="#none" class="line-height-1 close-button"><i class="fa-solid fa-xmark"></i></a>
+                </td>
+              </tr>
+            </tbody>
+            }
+          </table>
+
+          <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="pe-3">컨텐츠 카드 추가</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Wallpaper</a></li>
+              <li><a class="dropdown-item" href="#">Icon Pack (iOS Only)</a></li>
+              <li><a class="dropdown-item" href="#">Widget (iOS Only</a></li>
+              <li><a class="dropdown-item" href="#">Theme Pack (Android Only)</a></li>
+              <li><a class="dropdown-item" href="#">Video</a></li>
+              <li><a class="dropdown-item" href="#">Sound</a></li>
+              <li><a class="dropdown-item" href="#">AR Camera</a></li>
+              <li><a class="dropdown-item" href="#">Shop</a></li>
+              <li><a class="dropdown-item" href="#">Magazine</a></li>
+              <li><a class="dropdown-item" href="#">Event</a></li>
+              <li><a class="dropdown-item" href="#">Notice</a></li>
+            </ul>
+          </div>
+          <div class="d-flex gap-2  mt-5">
+            <button type="button" class="btn btn-secondary width-150px">취소</button>
+            <button type="button" class="btn btn-dark width-150px">등록</button>
+          </div>
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+<script>
+  $(function () {
+    $("#sortable").sortable({
+      handle: ".drag-icon",
+      cursor: "move",
+      containment: "#sortable",
+    });
+  })
+
+  ///아이템 삭제
+  $(document).on('click', '.sort-table .close-button', function () {
+    $(this).closest('.sort-table').remove();
+  })
+</script>
+
+</html>

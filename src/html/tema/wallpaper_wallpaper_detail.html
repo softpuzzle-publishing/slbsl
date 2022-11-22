@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          <div class="page-top">
+            <h1 class="page-title">
+              <a href="javascript:history.back();"><i class="fa-solid fa-arrow-left me-2"></i></a>
+              월페이퍼 상세
+            </h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">테마</li>
+                <li class="breadcrumb-item">Default</li>
+                <li class="breadcrumb-item">SLBS Wallpapers</li>
+                <li class="breadcrumb-item">월페이퍼 상세
+                </li>
+              </ol>
+            </nav>
+          </div>
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- table -->
+          <table class="table table-bordered">
+            <colgroup>
+              <col style="width: 200px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>월페이퍼 이미지</th>
+                <td>
+                  <input type="file" name="" id="image_upload" class="visually-hidden">
+                  <label for="image_upload" class="btn btn-outline-dark width-150px">이미지 업로드</label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <div class="upload-file hstack gap-2">
+                    파일이름1111111122222222222222222222.jpg
+                    <a href="javascript:;" class="line-height-1"><i class="fa-solid fa-xmark"></i></a>
+                  </div>
+                  <ul class="category-thumb-wrap">
+                    <li>
+                      <label for="wallpaper-category-thumb" class="wallpaper-category-thumb vstack gap-2">
+                        <div class="thumbnail w-100">
+                          <img src="../../assets/images/@landscape.jpg" alt="">
+                        </div>
+                      </label>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>종류</th>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
+                    <label class="form-check-label" for="flexRadioDefault1">Still</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                    <label class="form-check-label" for="flexRadioDefault2">Live</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>가격</th>
+                <td class="hstack">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
+                    <label class="form-check-label" for="flexRadioDefault1">무료</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                    <label class="form-check-label" for="flexRadioDefault2">유료</label>
+                  </div>
+                  <div class="d-inline-block"><input type="text" class="form-control w-auto"placeholder="가격 입력"></div>
+                </td>
+              </tr>
+              <tr>
+                <th>카테고리</th>
+                <td>
+                  <select name="" id="" class="form-select">
+                    <option value="">LIFESTYLE</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>배포상태</th>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
+                    <label class="form-check-label" for="flexRadioDefault1">미배포</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                    <label class="form-check-label" for="flexRadioDefault2">배포</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- //table -->
+          <div class="d-flex gap-2  mt-5">
+            <button type="button" class="btn btn-secondary width-150px">삭제</button>
+            <button type="button" class="btn btn-dark width-150px">저장</button>
+          </div>
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+<script>
+
+</script>
+
+</html>

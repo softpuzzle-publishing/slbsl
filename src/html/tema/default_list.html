@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top.html', { "title" : "테마", "breadcrumb": { "dep2": "Default" } })
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- table -->
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="text-start">컨텐츠 카드</th>
+                <th class="text-start">메인 이미지</th>
+                <th class="text-start">타이틀</th>
+                <th class="text-start">디스크립션</th>
+                <th class="text-start">배포상태</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- NOW ISSUE -->
+              <tr>
+                <td class="text-start"><a href="issue_form.html">NOW ISSUE</a></td>
+                <td class="text-start">
+                  <div class="thumbnail ratio-4x3 ratio">
+                    <img src="../../assets/images/@landscape.jpg" alt="">
+                    <!-- 이미지 없을때  (아래) -->
+                    <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                  </div>
+                </td>
+                <td class="text-start">SLBS X LALIGA : A POR EL GOL</td>
+                <td class="text-start">슬래시 비 슬래시와 스페인 축구 리그 LaLiga의 콜라보레이션
+                </td>
+                <td class="text-start">
+                  <input type="radio" class="btn-check" id="distribute" autocomplete="off" name="distribute" checked>
+                  <label class="btn btn-outline-dark" for="distribute">배포</label>
+
+                  <input type="radio" class="btn-check" id="undistributed-" autocomplete="off" name="distribute">
+                  <label class="btn btn-outline-dark" for="undistributed-">미배포</label>
+                </td>
+              </tr>
+
+              <!-- SLBS WALLPAPERS -->
+              <tr>
+                <td class="text-start"><a href="wallpapers_form.html">SLBS WALLPAPERS </a></td>
+                <td class="text-start">
+                  <div class="thumbnail ratio-4x3 ratio">
+                    <img src="../../assets/images/@landscape.jpg" alt="">
+                    <!-- 이미지 없을때  (아래) -->
+                    <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                  </div>
+                </td>
+                <td class="text-start">1000+ WALLPAPERS FOR YOU</td>
+                <td class="text-start">슬래시 비 슬래시와 스페인 축구 리그 LaLiga의 콜라보레이션
+                </td>
+                <td class="text-start">
+                  <input type="radio" class="btn-check" id="distribute" autocomplete="off" name="distribute" checked>
+                  <label class="btn btn-outline-dark" for="distribute">배포</label>
+
+                  <input type="radio" class="btn-check" id="undistributed-" autocomplete="off" name="distribute">
+                  <label class="btn btn-outline-dark" for="undistributed-">미배포</label>
+                </td>
+              </tr>
+
+              <!-- SHOP -->
+              <tr>
+                <td class="text-start"><a href="shop_form.html">SHOP</a></td>
+                <td class="text-start">
+                  <div class="thumbnail ratio-4x3 ratio">
+                    <img src="../../assets/images/@landscape.jpg" alt="">
+                    <!-- 이미지 없을때  (아래) -->
+                    <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                  </div>
+                </td>
+                <td class="text-start">30% DISCOUNT FOR 90 DAYS</td>
+                <td class="text-start">슬래시 비 슬래시와 스페인 축구 리그 LaLiga의 콜라보레이션
+                </td>
+                <td class="text-start">
+                  <input type="radio" class="btn-check" id="distribute" autocomplete="off" name="distribute" checked>
+                  <label class="btn btn-outline-dark" for="distribute">배포</label>
+
+                  <input type="radio" class="btn-check" id="undistributed-" autocomplete="off" name="distribute">
+                  <label class="btn btn-outline-dark" for="undistributed-">미배포</label>
+                </td>
+              </tr>
+
+              <!-- SLASH B SLASH NEWS -->
+              <tr>
+                <td class="text-start"><a href="news_form.html">SLASH B SLASH NEWS</a></td>
+                <td class="text-start">
+                  <div class="thumbnail ratio-4x3 ratio">
+                    <img src="../../assets/images/@landscape.jpg" alt="">
+                    <!-- 이미지 없을때  (아래) -->
+                    <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                  </div>
+                </td>
+                <td class="text-start">CAMPAIGN #03 : CHERRY ON TOP</td>
+                <td class="text-start">슬래시 비 슬래시와 스페인 축구 리그 LaLiga의 콜라보레이션
+                </td>
+                <td class="text-start">
+                  <input type="radio" class="btn-check" id="distribute" autocomplete="off" name="distribute" checked>
+                  <label class="btn btn-outline-dark" for="distribute">배포</label>
+
+                  <input type="radio" class="btn-check" id="undistributed-" autocomplete="off" name="distribute">
+                  <label class="btn btn-outline-dark" for="undistributed-">미배포</label>
+                </td>
+              </tr>
+
+              <!-- OUR TECH SYSTEM -->
+              <tr>
+                <td class="text-start"><a href="system_form.html">OUR TECH SYSTEM</a></td>
+                <td class="text-start">
+                  <div class="thumbnail ratio-4x3 ratio">
+                    <img src="../../assets/images/@landscape.jpg" alt="">
+                    <!-- 이미지 없을때  (아래) -->
+                    <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                  </div>
+                </td>
+                <td class="text-start">SLASH B SLASH'S NEW EXPERIENCE</td>
+                <td class="text-start">슬래시 비 슬래시와 스페인 축구 리그 LaLiga의 콜라보레이션
+                </td>
+                <td class="text-start">
+                  <input type="radio" class="btn-check" id="distribute" autocomplete="off" name="distribute" checked>
+                  <label class="btn btn-outline-dark" for="distribute">배포</label>
+
+                  <input type="radio" class="btn-check" id="undistributed-" autocomplete="off" name="distribute">
+                  <label class="btn btn-outline-dark" for="undistributed-">미배포</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- //table -->
+          @@include('@@webRoot/html/_include/_pagination.html')
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+</html>

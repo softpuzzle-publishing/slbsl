@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top4.html', { "title" : "테마", "breadcrumb": { "dep2": "Original", "dep3": "테마 상세", "dep4": "Event" } })
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- table -->
+          <table class="table table-bordered">
+            <colgroup>
+              <col style="width: 200px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>타이틀</th>
+                <td>
+                  <input type="text" class="form-control" placeholder="타이틀 입력 (영문 대문자)">
+                </td>
+              </tr>
+              <tr>
+                <th>디스크립션</th>
+                <td>
+                  <input type="text" class="form-control" placeholder="디스크립션 입력">
+                </td>
+              </tr>
+              <tr>
+                <th>카드 이미지 (4:3)</th>
+                <td>
+                  <div class="hstack gap-4">
+                    <div class="thumbnail ratio ratio-4x3" style="width: 200px;">
+                      <!-- <img src="../../assets/images/@landscape.jpg" alt=""> -->
+                      <!-- 이미지 없을때 (아래) -->
+                      <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div>
+                    </div>
+                    <div class="vstack gap-2 justify-content-center">
+                      <input type="file" name="" id="image_upload" class="visually-hidden">
+                      <label for="image_upload" class="btn btn-dark width-150px">이미지 업로드</label>
+                      <button type="button" class="btn btn-outline-dark width-150px">이미지 삭제</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>내용</th>
+                <td >
+                  <div style="height: 300px;">
+                    에디터 영역
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>버튼 텍스트</th>
+                <td>
+                  <input type="text" class="form-control" placeholder="버튼에 노출할 텍스트 입력">
+                </td>
+              </tr>
+              <tr>
+                <th>버튼 URL</th>
+                <td>
+                  <div class="vstack gap-2">
+                    <div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio"id="flexRadioDefault1" checked="" name="url">
+                        <label class="form-check-label" for="flexRadioDefault1">외부링크</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio"id="flexRadioDefault2" name="url">
+                        <label class="form-check-label" for="flexRadioDefault2">앱 내부 페이지</label>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="버튼 클릭 시 이동시킬 URL 입력">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>배포상태</th>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
+                    <label class="form-check-label" for="flexRadioDefault1">미배포</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                    <label class="form-check-label" for="flexRadioDefault2">배포</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- //table -->
+
+
+          <div class="d-flex gap-2  mt-5">
+            <button type="button" class="btn btn-secondary width-150px">취소</button>
+            <button type="button" class="btn btn-dark width-150px">저장</button>
+          </div>
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+<script>
+ ///아이템 삭제
+ $(document).on('click', '.category-thumb-wrap .close-button', function () {
+    $(this).closest('li').remove();
+  })
+</script>
+
+</html>

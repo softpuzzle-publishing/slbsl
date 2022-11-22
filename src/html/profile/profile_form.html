@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/html/_include/_head.html')
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="container">
+        @@include('@@webRoot/html/_include/_aside.html')
+        <main id="main">
+          <div class="container-fluid">
+            <!-- 페이지 타이틀 영역 -->
+            @@include('@@webRoot/html/_include/_page_top.html', { "title" : "프로필 편집", "breadcrumb": { "dep2": "프로필 편집" } })
+            <!-- //페이지 타이틀 영역 -->
+
+            <!-- table -->
+            <table class="table table-bordered">
+              <colgroup>
+                <col style="width: 200px;">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>프로필 이미지</th>
+                  <td>
+                    <div class="hstack gap-4">
+                      <div class="thumbnail">
+                        <img src="../../assets/images/@landscape.jpg" alt="">
+                        <!-- 이미지 없을때 (아래) -->
+                        <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                      </div>
+                      <div class="vstack gap-2 justify-content-center">
+                        <input type="file" name="" id="image_upload" class="visually-hidden">
+                        <label for="image_upload" class="btn btn-dark width-150px">이미지 업로드</label>
+                        <button type="button"  class="btn btn-outline-dark width-150px">이미지 삭제</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>등급</th>
+                  <td>슈퍼관리자</td>
+                </tr>
+                <tr>
+                  <th>이름</th>
+                  <td>정용채</td>
+                </tr>
+                <tr>
+                  <th>아이디</th>
+                  <td>masteralpa</td>
+                </tr>
+                <tr>
+                  <th>비밀번호</th>
+                  <td>
+                    <button type="button" class="btn btn-outline-dark width-150px" data-bs-target="#modal-password-reset" data-bs-toggle="modal">재설정</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- //table -->
+
+            <div class="d-flex gap-2 mt-5">
+              <button type="button" class="btn btn-secondary width-150px">취소</button>
+              <button type="button" class="btn btn-dark width-150px">저장</button>
+            </div>
+          </div>
+          <!-- //container-fluid -->
+        </main>
+        <!-- //main -->
+      </div>
+    </div>
+    <!-- //wrap -->
+    @@include('@@webRoot/html/_include/_modal.html')
+  </body>
+</html>

@@ -153,3 +153,68 @@
     .page-link:hover{background: #000;}
   }
 }
+
+
+// 썸네일 이미지
+.thumbnail{
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  background-color: $light;
+  img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  &.ratio{
+    height: auto;
+  }
+}
+
+// 넓이
+.width-150px{width: 150px;}
+
+
+
+// 테이블
+.table-center{
+  td,th{
+    text-align: center;
+    > *, button, a{
+      margin:auto;
+    }
+  }
+}
+
+table{
+  &:not(.table-hover){
+    td{
+      background-color: $white!important;
+    }
+  }
+}
+
+.ui-sortable-helper {
+  display: table;
+}
+
+.modal-footer{
+  justify-content: center;
+  >button{min-width: 100px;}
+}
+
+.overflow-y-auto{
+  overflow-y: auto;
+}
+
+.modal-xl{
+  --bs-modal-width:1400px;
+}
+
+.fw-extrabold{
+  font-weight: 900;
+}
+
+.line-height-1{
+  line-height: 1;
+}

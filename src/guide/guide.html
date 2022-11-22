@@ -111,6 +111,8 @@
         <a href="#g6">Badge</a>
         <a href="#g7">Tab</a>
         <a href="#g8">Pagination</a>
+        <a href="#g9">Thumbnail</a>
+        <a href="#g10">input file</a>
       </div>
       <div id="guide-container">
         <section id="g0">
@@ -216,6 +218,36 @@
               <option value="3">Three</option>
             </select>
           </div>
+
+          <!-- 테이블 해더 내에 들어갈경우 -->
+            <!-- 일반 방식(아래) -->
+                  <!-- 탈퇴방식
+                  <a href="javascript:;">
+                    <i class="fa-solid fa-caret-down"></i>
+                  </a> -->
+                  <!-- 드롭다운 방식(아래) -->
+                  <div class="dropdown">
+                    <button class="btn dropdown-toggle p-0 font-size-14px fw-bold hstack" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      탈퇴방식 
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">전체</a></li>
+                      <li><a class="dropdown-item" href="#">본인탈퇴</a></li>
+                      <li><a class="dropdown-item" href="#">강제탈퇴</a></li>
+                    </ul>
+                  </div>
+                  
+          <!-- 테이블 해더 내에 들어갈경우 끝 -->
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              탈퇴방식 드롭다운
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">전체</a></li>
+              <li><a class="dropdown-item" href="#">본인탈퇴</a></li>
+              <li><a class="dropdown-item" href="#">강제탈퇴</a></li>
+            </ul>
+          </div>
         </section>
         <section id="g6">
           <h2>Badge</h2>
@@ -281,6 +313,33 @@
                 </li>
               </ul>
             </nav>
+          </div>
+        </section>
+        <section id="g9">
+          <h2>Thumbnail</h2>
+          <div class="thumbnail ratio-4x3 ratio">
+            <img src="../../assets/images/@landscape.jpg" alt="">
+            <!-- 이미지 없을때  (아래) -->
+            <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+          </div>
+        </section>
+        <section id="g10">
+          <h2>Input file</h2>
+          <div class="hstack gap-4">
+            <div class="thumbnail ratio ratio-4x3" style="width: 200px">
+              <!-- <img src="../../assets/images/@landscape.jpg" alt=""> -->
+              <!-- 이미지 없을때 (아래) -->
+              <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div>
+            </div>
+            <div class="vstack gap-2 justify-content-center">
+              <input type="file" name="" id="image_upload" class="visually-hidden">
+              <label for="image_upload" class="btn btn-dark width-150px">이미지 업로드</label>
+              <button type="button" class="btn btn-outline-dark width-150px">이미지 삭제</button>
+            </div>
+          </div>
+          <div class="hstack gap-2">
+            <input type="file" class="form-control" id="fileUpLoad" style="width: 300px">
+            <button type="button" class="btn btn-outline-dark">삭제</button>
           </div>
         </section>
       </div>

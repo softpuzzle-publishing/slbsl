@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top_form.html', { "title" : "테마", "breadcrumb": { "dep2": "Default", "dep3": "SLBS Wallpapers",} })
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- 탭 -->
+          <nav class="mb-4">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a href="wallpaper_default_form.html" class="nav-link" role="tab" aria-controls="nav-home" aria-selected="true">기본정보</a>
+              <a href="wallpaper_category_list.html" class="nav-link active" role="tab" aria-controls="nav-profile" aria-selected="false">카테고리</a>
+              <a href="wallpaper_wallpaper_list.html" class="nav-link" role="tab" aria-controls="nav-contact" aria-selected="false">월페이퍼</a>
+            </div>
+          </nav>
+          <!-- 탭 끝 -->
+
+          <!-- table 상단 -->
+          <div class="table-top">
+            <div class="row align-items-end justify-content-between">
+              <div class="col-auto">
+                총 15 개
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-dark" style="min-width: 160px">새 카테고리 등록</button>
+              </div>
+            </div>
+          </div>
+          <!-- //table 상단 -->
+          <!-- table -->
+          <table class="table table-bordered table-center" id="sortable">
+            <colgroup>
+              <col style="width: 5%;">
+              <col style="width: 52%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 10%;">
+              <col style="width: 8%;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>노출순서</th>
+                <th>카테고리명</th>
+                <th>월페이퍼 등록 수</th>
+                <th>
+                  <!-- 일반 방식(아래) -->
+                  <!-- 배포상태
+                  <a href="javascript:;">
+                    <i class="fa-solid fa-caret-down"></i>
+                  </a> -->
+                  <!-- 드롭다운 방식(아래) -->
+                  <div class="dropdown">
+                    <button class="btn dropdown-toggle p-0 font-size-14px fw-bold hstack" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      배포상태
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">전체</a></li>
+                      <li><a class="dropdown-item" href="#">배포</a></li>
+                      <li><a class="dropdown-item" href="#">미배포</a></li>
+                    </ul>
+                  </div>
+                </th>
+                <th>등록일</th>
+                <th>수정일</th>
+                <th>순서변경</th>
+              </tr>
+            </thead>
+            @@for (var i = 10; i > 0; i--) {
+            <tbody class="sort-table">
+              <tr>
+                <td>`+ i +`</td>
+                <td class="text-start"><a href="wallpaper_category_detail.html">LIFESTYLE</a></td>
+                <td>45</td>
+                <td>배포</td>
+                <td>2022.10.20</td>
+                <td>2022.10.20</td>
+                <td>
+                  <a href="#none" class="hstack drag-icon text-decoration-none justify-content-center" style="width: 36px;">
+                    <i class="fa-sharp fa-solid fa-bars"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          }
+          </table>
+          <!-- //table -->
+          @@include('@@webRoot/html/_include/_pagination.html')
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+
+<script>
+  $(function () {
+    $( "#sortable" ).sortable({
+      handle: ".drag-icon",
+      cursor: "move",
+      containment: "#sortable",
+    });
+  })
+</script>
+
+</html>

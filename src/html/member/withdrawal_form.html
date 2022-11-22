@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top_form.html', { "title" : "회원정보", "breadcrumb": { "dep2": "탈퇴회원", "dep3":"회원상세" } })
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- table -->
+          <table class="table table-bordered">
+            <colgroup>
+              <col style="width: 200px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>닉네임</th>
+                <td>alpaca</td>
+              </tr>
+              <tr>
+                <th>이름</th>
+                <td>정용채</td>
+              </tr>
+              <tr>
+                <th>이메일</th>
+                <td>slashbslash@gmail.com</td>
+              </tr>
+              <tr>
+                <th>휴대폰 번호</th>
+                <td>010-1234-5678</td>
+              </tr>
+              <tr>
+                <th>생년월일</th>
+                <td>1995.11.27</td>
+              </tr>
+              <tr>
+                <th>가입경로</th>
+                <td>네이버</td>
+              </tr>
+              <tr>
+                <th>가입일</th>
+                <td>2022.10.20
+                </td>
+              </tr>
+              <tr>
+                <th>마케팅 수신 동의</th>
+                <td>O / 2022.10.20</td>
+              </tr>
+              <tr>
+                <th>탈퇴일</th>
+                <td>2022.10.20</td>
+              </tr>
+              <tr>
+                <th>탈퇴방식</th>
+                <td>본인탈퇴</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <div class="mt-5 mb-2 fs-5 fw-bold">NFC 테마 연동/해제 이력</div>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>테마</th>
+                <th>NFC 연동일</th>
+                <th>NFC 해제일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CL Cherry On Top</td>
+                <td>2022.10.20</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>New Xeneration</td>
+                <td>2022.10.20</td>
+                <td>2022.10.21
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- //table -->
+
+          <!-- 슈퍼 관리자 일때만 보임 -->
+          <div class="d-flex gap-2 mt-5">
+            <button type="button" class="btn btn-secondary width-150px">회원정보 삭제</button>
+            <button type="button" class="btn btn-dark width-150px">회원탈퇴 복원</button>
+          </div>
+          <!-- 슈퍼 관리자 일때만 보임 끝 -->
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+</html>
