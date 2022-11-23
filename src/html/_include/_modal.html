@@ -856,3 +856,199 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+<!-- modal: 푸시알림 > 테마알림 > 수신 회원 선택-->
+<div class="modal" tabindex="-1" id="modal-push-select-person">
+  <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable" style="width: 1400px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">수신 회원 선택</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex gap-5 align-items-end">
+          <!-- 왼쪽 -->
+          <div class="vstack gap-3 col-6">
+          
+            <div class="row gx-2 justify-content-center align-items-center">
+              <div class="col-auto">
+                <select name="" id="" class="form-select">
+                  <option value="">닉네임</option>
+                </select>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="키워드를 입력하세요">
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-dark">검색</button>
+              </div>
+            </div>
+
+            <div class="hstack gap-2 justify-content-end">
+              <button type="button" class="btn btn-dark">전체 추가</button>
+              <button type="button" class="btn btn-outline-dark">선택 추가</button>
+            </div>
+
+            <div class="">
+              <div class="table-responsive" style="height:419px;">
+                <table class="table table-bordered mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-center">
+                        <input type="checkbox" class="form-check-input m-0 align-middle" />
+                      </th>
+                      <th class="text-start">닉네임</th>
+                      <th class="text-start">이름</th>
+                      <th class="text-start">아이디</th>
+                      <th class="text-start">이메일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @@for (var i = 15; i > 0; i--) {
+                    <tr>
+                      <td class="text-center">
+                        <input type="checkbox" class="form-check-input m-0 align-middle" />
+                      </td>
+                      <td class="text-start">alpaca</td>
+                      <td class="text-start">정용채</td>
+                      <td class="text-start">slashbslash@naver.com</td>
+                      <td class="text-start">slashbslash@naver.com</td>
+                    </tr>
+                    }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="hstack justify-content-between" style="min-height: 42px;">
+              <!-- 내용 없으면 이 아래 부분만 없애세요 -->
+              <div>294 - 324 / 324</div>
+              <!-- pagination -->
+              <nav>
+                <ul class="pagination justify-content-center m-0">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="First">
+                      <span class="material-icons"> keyboard_double_arrow_left </span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span class="material-icons"> keyboard_arrow_left </span>
+                    </a>
+                  </li>
+                  <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span class="material-icons"> keyboard_arrow_right </span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Last">
+                      <span class="material-icons"> keyboard_double_arrow_right </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- //pagination -->
+              <!-- 내용 없으면 이 아래 부분만 없애세요 끝 -->
+            </div>
+          </div>
+          <!-- 왼쪽 끝 -->
+
+          <!-- 오른쪽  -->
+          <div class="gap-3 col-6">
+            
+            <div class="hstack justify-content-between mb-3">
+              <div class="fw-bold font-14px">선택된 회원 : 1000명</div>
+
+              <div class="hstack gap-2">
+                <button type="button" class="btn btn-dark">전체 삭제</button>
+                <button type="button" class="btn btn-outline-dark">선택 추가</button>
+              </div>
+            </div>
+
+            <div class="pb-3">
+              <div class="table-responsive" style="height:419px;">
+                <table class="table table-bordered mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-center">
+                        <input type="checkbox" class="form-check-input m-0 align-middle" />
+                      </th>
+                      <th class="text-start">닉네임</th>
+                      <th class="text-start">이름</th>
+                      <th class="text-start">아이디</th>
+                      <th class="text-start">이메일</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @@for (var i = 5; i > 0; i--) {
+                    <tr>
+                      <td class="text-center">
+                        <input type="checkbox" class="form-check-input m-0 align-middle" />
+                      </td>
+                      <td class="text-start">alpaca</td>
+                      <td class="text-start">정용채</td>
+                      <td class="text-start">slashbslash@naver.com</td>
+                      <td class="text-start">slashbslash@naver.com</td>
+                    </tr>
+                    }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="hstack justify-content-between" style="min-height: 42px;">
+              <!-- 내용 없으면 이 아래 부분만 없애세요 -->
+              <div>294 - 324 / 324</div>
+              <!-- pagination -->
+              <nav>
+                <ul class="pagination justify-content-center m-0">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="First">
+                      <span class="material-icons"> keyboard_double_arrow_left </span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span class="material-icons"> keyboard_arrow_left </span>
+                    </a>
+                  </li>
+                  <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span class="material-icons"> keyboard_arrow_right </span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Last">
+                      <span class="material-icons"> keyboard_double_arrow_right </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- //pagination -->
+              <!-- 내용 없으면 이 아래 부분만 없애세요 끝 -->
+            </div>
+          </div>
+          <!-- 오른쪽 끝 -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+        <button type="button" class="btn btn-dark">확인</button>
+      </div>
+    </div>
+  </div>
+</div>
+
