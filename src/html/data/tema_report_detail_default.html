@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top_form.html', { "title" : "데이터 리포트", "breadcrumb": { "dep2": "테마 리포트", "dep3": "테마 리포트 상세" } })
+          <!-- //페이지 타이틀 영역 -->
+
+          <h2 class="fs-4 fw-extrabold border-bottom pb-2">Default / SLASH B SLASH</h2>
+
+
+          <div class="mt-5 mb-2 fs-5 fw-bold">보유 컨텐츠 카드 활동 수</div>
+          <!-- table -->
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="text-start">컨텐츠 카드</th>
+                <th class="text-start">타이틀</th>
+                <th class="text-start">누적 클릭 수</th>
+                <th class="text-start">누적 다운로드 수 (전체 합계)</th>
+                <th class="text-start">개별 활동 수</th>
+              </tr>
+            </thead>
+            <tbody>
+              @@for (var i = 10; i > 0; i--) {
+              <tr>
+                <td class="text-start">Wallpaper</td>
+                <td class="text-start">CL Alpha Metal Wallpaper</td>
+                <td class="text-start">1,249,560</td>
+                <td class="text-start">1,249,560</td>
+                <td class="text-start">
+                  <a href="">확인하기 <i class="fa-solid fa-arrow-right"></i></a>
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+          <!-- //table -->
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+</html>

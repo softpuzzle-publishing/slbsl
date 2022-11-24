@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          <div class="page-top">
+            <h1 class="page-title">
+              <a href="javascript:history.back();"><i class="fa-solid fa-arrow-left me-2"></i></a>
+              Icon Pack
+            </h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">데이터 리포트</li>
+                <li class="breadcrumb-item">테마 리포트</li>
+                <li class="breadcrumb-item">테마 리포트 상세</li>
+                <li class="breadcrumb-item">Icon Pack</li>
+              </ol>
+            </nav>
+          </div>
+          <!-- //페이지 타이틀 영역 -->
+
+          <table class="table table-bordered table-center mt-3">
+            <colgroup>
+              <col style="width: 200px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>프리뷰 이미지</th>
+                <th>파일명</th>
+                <th>누적 다운로드 수</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="thumbnail">
+                    <img src="../../assets/images/@landscape.jpg" alt="">
+                    <!-- 이미지 없을때  (아래) -->
+                    <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                  </div>
+                </td>
+                <td class="text-start">cl-cherry-icon-A.zip</td>
+                <td class="text-start">760</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+</html>

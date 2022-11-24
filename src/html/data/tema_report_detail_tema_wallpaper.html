@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          <div class="page-top">
+            <h1 class="page-title">
+              <a href="javascript:history.back();"><i class="fa-solid fa-arrow-left me-2"></i></a>
+              Wallpaper
+            </h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">데이터 리포트</li>
+                <li class="breadcrumb-item">테마 리포트</li>
+                <li class="breadcrumb-item">테마 리포트 상세</li>
+                <li class="breadcrumb-item">Wallpaper</li>
+              </ol>
+            </nav>
+          </div>
+          <!-- //페이지 타이틀 영역 -->
+
+          <ul class="category-thumb-wrap">
+            @@ for(var i = 0; i < 15; i++){ <li>
+              <label for="wallpaper-category-thumb" class="wallpaper-category-thumb vstack">
+                <div class="thumbnail w-100">
+                  <img src="../../assets/images/@landscape.jpg" alt="">
+                  <!-- 이미지 없을때  (아래) -->
+                  <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                </div>
+                <p class="mt-3">누적 다운로드 수 : 1,980</p>
+              
+              </label>
+              </li>
+              <li>
+                <label for="wallpaper-category-thumb" class="wallpaper-category-thumb vstack">
+                  <div class="thumbnail w-100">
+                    <!-- <img src="../../assets/images/@landscape.jpg" alt=""> -->
+                    <!-- 이미지 없을때  (아래) -->
+                    <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div>
+                  </div>
+                  <p class="mt-3">누적 다운로드 수 : 1,980</p>
+                </label>
+              </li>
+              }
+          </ul>
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+</html>

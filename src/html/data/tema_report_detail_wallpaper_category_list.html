@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          <div class="page-top">
+            <h1 class="page-title">
+              <a href="javascript:history.back();"><i class="fa-solid fa-arrow-left me-2"></i></a>
+              SLBS Wallpapers
+            </h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">데이터 리포트</li>
+                <li class="breadcrumb-item">테마 리포트</li>
+                <li class="breadcrumb-item">테마 리포트 상세</li>
+                <li class="breadcrumb-item">SLBS Wallpapers</li>
+              </ol>
+            </nav>
+          </div>
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- 탭 -->
+          <nav class="mb-4">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a href="tema_report_detail_wallpaper_category_list.html" class="nav-link active" role="tab" aria-controls="nav-home" aria-selected="true">카테고리</a>
+              <a href="tema_report_detail_wallpaper_wallpaper_list.html" class="nav-link" role="tab" aria-controls="nav-profile" aria-selected="false">월페이퍼</a>
+            </div>
+          </nav>
+          <!-- 탭 끝 -->
+
+          <!-- table -->
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="text-start">카테고리명</th>
+                <th class="text-start">월페이퍼 등록 수</th>
+                <th class="text-start">누적 다운로드 수 (전체 합계)</th>
+              </tr>
+            </thead>
+            <tbody>
+              @@for (var i = 10; i > 0; i--) {
+              <tr>
+                <td class="text-start"><a href="">LIFESTYLE</a></td>
+                <td class="text-start">45</td>
+                <td class="text-start">1,249,560</td>
+              </tr>
+              }
+            </tbody>
+          </table>
+          <!-- //table -->
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+</html>

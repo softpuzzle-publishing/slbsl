@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top.html', { "title" : "관리자 계정", "breadcrumb": { "dep2": "관리자 계정" } })
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- table -->
+          <table class="table table-bordered">
+            <colgroup>
+              <col style="width: 200px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>관리자 등급</th>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
+                    <label class="form-check-label" for="flexRadioDefault1">일반관리자</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                    <label class="form-check-label" for="flexRadioDefault2">슈퍼관리자</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>이름*
+                </th>
+                <td>
+                  <input type="text" class="form-control" placeholder="이름 또는 닉네임 입력" style="width: 400px;">
+                </td>
+              </tr>
+              <tr>
+                <th>아이디*
+                </th>
+                <td>
+                  <div class="hstack gap-2">
+                    <input type="text" class="form-control" placeholder="이름 또는 닉네임 입력" style="width: 400px;">
+                    <button type="button" class="btn btn-outline-dark">중복확인</button>
+                    <span class="ms-2 form-text">사용 가능한 아이디입니다.</span>
+                    <span class="ms-2 form-text text-danger">이미 사용 중인 아이디입니다.</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>메모</th>
+                <td>
+                  <input type="text" class="form-control" placeholder="관리자 메모 입력 (선택)">
+                </td>
+              </tr>
+              <tr>
+                <th>비밀번호*
+                </th>
+                <td>
+                  <input type="password"  class="form-control" placeholder="비밀번호 입력"  style="width: 400px;">
+                </td>
+              </tr>
+              <tr>
+                <th>비밀번호 확인*
+                </th>
+                <td>
+                  <input type="password"  class="form-control" placeholder="비밀번호 재입력"  style="width: 400px;">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- //table -->
+    
+          <div class="d-flex gap-2  mt-5">
+            <button type="button" class="btn btn-secondary width-150px">취소</button>
+            <button type="button" class="btn btn-dark width-150px">생성</button>
+          </div>
+          
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+</html>

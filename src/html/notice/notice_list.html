@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          <div class="page-top">
+            <h1 class="page-title">공지사항</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">공지사항</li>
+              </ol>
+            </nav>
+          </div>
+          
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- 필터 영역 -->
+          <div class="filter-area">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">등록일</div>
+              <div class="col-auto">
+                <div class="row g-2 align-items-center">
+                  <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                  </div>
+                  <div class="col-auto">~</div>
+                  <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <input type="text" class="form-control" placeholder="키워드를 입력하세요" style="width: 400px" />
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-dark" style="min-width: 80px">검색</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-outline-dark" style="min-width: 80px">초기화</button>
+              </div>
+            </div>
+          </div>
+          <!-- //필터 영역 -->
+          <!-- table 상단 -->
+          <div class="table-top">
+            <div class="row align-items-end justify-content-between">
+              <div class="col-auto">
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+                    <select class="form-select">
+                      <option value="">10개</option>
+                      <option value="">30개</option>
+                      <option value="">50개</option>
+                      <option value="">100개</option>
+                    </select>
+                  </div>
+                  <div class="col-auto">294 - 324 / 324</div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-dark" style="min-width: 160px">공지사항 등록</button>
+              </div>
+            </div>
+          </div>
+          <!-- //table 상단 -->
+          <!-- table -->
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="text-start">제목</th>
+                <th class="text-start">작성자</th>
+                <th class="text-start">등록일</th>
+                <th class="text-start">
+                  <div class="dropdown">
+                    <button class="btn dropdown-toggle p-0 font-size-14px fw-bold hstack" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      배포상태
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">전체</a></li>
+                      <li><a class="dropdown-item" href="#">배포</a></li>
+                      <li><a class="dropdown-item" href="#">미배포</a></li>
+                    </ul>
+                  </div>
+                </th>
+                <th class="text-start">조회수</th>
+              </tr>
+            </thead>
+            <tbody>
+              @@for (var i = 10; i > 0; i--) {
+              <tr>
+                <td class="text-start">
+                  <a href="" class="text-truncate" style="display:block; width:400px;">별 마리아 밤을 가득 별이 이런 오면 않은 있습니다.11111111111111111111111111111111111111111111111111111
+                  </a>
+                </td>
+                <td class="text-start">정용채</td>
+                <td class="text-start">2022.10.20</td>
+                <td class="text-start">배포</td>
+                <td class="text-start">10</td>
+              </tr>
+              }
+            </tbody>
+          </table>
+          <!-- //table -->
+          @@include('@@webRoot/html/_include/_pagination.html')
+
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+</html>

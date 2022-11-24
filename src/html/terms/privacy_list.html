@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top.html', { "title" : "약관 및 버전", "breadcrumb": { "dep2": "개인정보수집 및 이용" } })
+          <!-- //페이지 타이틀 영역 -->
+
+          <!-- 필터 영역 -->
+          <div class="filter-area justify-content-between d-flex">
+            <select name="" id="" class="form-select" style="width: 250px;">
+              <option value="">[v1.0] 2022.11.08
+              </option>
+            </select>
+
+            <button type="button" class="btn btn-dark" style="min-width: 160px" data-bs-target="#modal-add-version" data-bs-toggle="modal">버전 추가</button>
+          </div>
+          <!-- //필터 영역 -->
+
+          <!-- table -->
+          <table class="table table-bordered">
+            <colgroup>
+              <col style="width: 200px;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>내용</th>
+                <td>
+                  <div class="overflow-y-auto" style="height: 500px;">
+                    개인정보 처리방침
+
+                    주식회사 슬래시비슬래시는 이용자들의 개인정보보호를 매우 중요시하며, 이용자가 회사의 서비스를 이용함과 동시에 온라인상에서 회사에 제공한 개인정보가 보호 받을 수 있도록 최선을 다하고 있습니다. 이에 주식회사 슬래시비슬래시는 통신비밀보호법, 전기통신사업법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 정보통신서비스제공자가 준수하여야 할 관련 법규상의 개인정보보호 규정 및 정보통신부가 제정한 개인정보보호지침을 준수하고 있습니다.
+                    
+                    주식회사 슬래시비슬래시는 개인정보 처리방침을 통하여 이용자들이 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려 드립니다.
+                    
+                    주식회사 슬래시비슬래시는 개인정보 처리방침을 홈페이지 첫 화면에 공개함으로써 이용자들이 언제나 용이하게 보실 수 있도록 조치하고 있습니다.
+                    
+                    회사의 개인정보 처리방침은 정부의 법률 및 지침 변경이나 회사의 내부 방침 변경 등으로 인하여 수시로 변경될 수 있고, 이에 따른 개인정보 처리방침의 지속적인 개선을 위하여 필요한 절차를 정하고 있습니다. 그리고 개인정보 처리방침을 개정하는 경우나 개인정보 처리방침 변경될 경우 쇼핑몰의 첫 페이지의 개인정보 처리방침을 통해 고지하고 있습니다. 이용자들께서는 사이트 방문 시 수시로 확인하시기 바랍니다.
+                    
+                    주식회사 슬래시비슬래시는 개인정보 처리방침은 다음과 같은 내용을 담고 있습니다.
+                    개인정보 수집에 대한 동의
+                    개인정보의 수집목적 및 이용목적
+                    수집하는 개인정보 항목 및 수집방법
+                    수집하는 개인정보의 보유 및 이용기간
+                    서비스 미 이용자의 개인정보 분리 보관
+                    수집한 개인정보의 공유 및 제공
+                    이용자 자신의 개인정보 관리(열람,정정,삭제 등)에 관한 사항
+                    쿠키(cookie)의 운영에 관한 사항
+                    비회원 고객의 개인정보 관리
+                    개인정보의 위탁처리
+                    개인정보관련 의견수렴 및 불만처리에 관한 사항
+                    개인정보 관리책임자 및 담당자의 소속-성명 및 연락처
+                    고지의 의무
+                    
+                    1.개인정보 수집에 대한 동의
+                    주식회사 슬래시비슬래시는 이용자들이 회사의 개인정보 처리방침 또는 이용약관의 내용에 대하여 「동의」버튼 또는「취소」버튼을 클릭할 수 있는 절차를 마련하여, 「동의」버튼을 클릭하면 개인정보 수집에 대해 동의한 것으로 봅니다.
+                    
+                    2.개인정보의 수집목적 및 이용목적
+                    ·"개인정보"라 함은 생존하는 개인에 관한 정보로서 당해 정보에 포함되어 있는 성명, 주민등록번호 등의 사항에 의하여 당해 개인을 식별할 수 있는 정보(당해 정보만으로는 특정 개인을 식별할 수 없더라도 다른 정보와 용이하게 결합하여 식별할 수 있는 것을 포함)를 말합니다.
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- //table -->
+
+          <div class="d-flex gap-2  mt-5">
+            <button type="button" class="btn btn-secondary width-150px">삭제</button>
+            <button type="button" class="btn btn-dark width-150px">저장</button>
+          </div>
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+</html>

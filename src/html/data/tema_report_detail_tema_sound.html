@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          <div class="page-top">
+            <h1 class="page-title">
+              <a href="javascript:history.back();"><i class="fa-solid fa-arrow-left me-2"></i></a>
+              Sound
+            </h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">데이터 리포트</li>
+                <li class="breadcrumb-item">테마 리포트</li>
+                <li class="breadcrumb-item">테마 리포트 상세</li>
+                <li class="breadcrumb-item">Sound</li>
+              </ol>
+            </nav>
+          </div>
+          <!-- //페이지 타이틀 영역 -->
+
+          <table class="table table-bordered mt-3">
+            <thead>
+              <tr>
+                <th>타이틀</th>
+                <th>다운로드 횟수 제한</th>
+                <th>누적 다운로드 수</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-start">CL Alpha Metal</td>
+                <td class="text-start">무제한</td>
+                <td class="text-start">760</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+</html>
