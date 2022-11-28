@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-Compatible" content="IE=edge" />
+    <title>SLASH B SLASH 관리자</title>
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="icon" type="image/png" href="../../assets/images/favicon.ico" sizes="32x32" />
+
+    <!-- plugin css -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/lib/jquery-ui/jquery-ui.min.css" />
+    <link href="https://cdn.jsdelivr.net/gh/Eonasdan/tempus-dominus@master/dist/css/tempus-dominus.css" rel="stylesheet" rossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css" />
+    <!-- plugin js -->
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/chartjs/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://momentjs.com/downloads/moment.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Eonasdan/tempus-dominus@master/dist/js/tempus-dominus.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
+
+    <!-- publishing css -->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <!-- publishing js -->
+    <script src="../../assets/js/ui.js" defer></script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="container">
+        <aside id="aside">
+          <div class="sidebar-brand">
+            <img src="../../assets/images/logo.svg" alt="SLASH B SLASH1" />
+          </div>
+          <nav class="sidebar-nav-wrap">
+            <ul class="sidebar-nav">
+              <li>
+                <a href="../../html/dashboard/dashboard.html">
+                  <span><i class="icon-sidebar-home"></i>대시보드</span>
+                </a>
+              </li>
+              <li class="has-treeview active show">
+                <!-- 현재 페이지 .active.show -->
+                <a href="#none">
+                  <span><i class="icon-sidebar-user"></i>회원정보</span>
+                </a>
+                <ul class="second-level">
+                  <li class="active"><a href="#none">가입회원</a></li>
+                  <li><a href="#none">휴면회원</a></li>
+                  <li><a href="#none">탈퇴회원</a></li>
+                </ul>
+              </li>
+              <li class="has-treeview">
+                <a href="#none">
+                  <span><i class="icon-sidebar-theme"></i>테마</span>
+                </a>
+                <ul class="second-level">
+                  <li><a href="#none">Default</a></li>
+                  <li><a href="#none">Original</a></li>
+                  <li><a href="#none">Special</a></li>
+                  <li><a href="#none">Genuine</a></li>
+                </ul>
+              </li>
+              <li class="has-treeview">
+                <a href="#none">
+                  <span><i class="icon-sidebar-lock"></i>시리얼넘버</span>
+                </a>
+                <ul class="second-level">
+                  <li><a href="#none">시리얼넘버 발행</a></li>
+                  <li><a href="#none">시리얼넘버 목록</a></li>
+                </ul>
+              </li>
+              <li class="has-treeview">
+                <a href="#none">
+                  <span><i class="icon-sidebar-bell"></i>푸시알림</span>
+                </a>
+                <ul class="second-level">
+                  <li><a href="#none">테마 알림</a></li>
+                  <li><a href="#none">공식 알림</a></li>
+                </ul>
+              </li>
+              <li class="has-treeview">
+                <a href="#none">
+                  <span><i class="icon-sidebar-chart"></i>데이터 리포트</span>
+                </a>
+                <ul class="second-level">
+                  <li><a href="#none">회원 리포트</a></li>
+                  <li><a href="#none">앱 리포트</a></li>
+                  <li><a href="#none">테마 리포트</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#none">
+                  <span><i class="icon-sidebar-notice"></i>공지사항</span>
+                </a>
+              </li>
+              <li class="has-treeview">
+                <a href="#none">
+                  <span><i class="icon-sidebar-terms"></i>약관 및 버전</span>
+                </a>
+                <ul class="second-level">
+                  <li><a href="#none">서비스 이용약관</a></li>
+                  <li><a href="#none">개인정보수집 및 이용</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#none">
+                  <span><i class="icon-sidebar-admin"></i>관리자 계정</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="sidebar-bottom">
+            <div class="user">
+              <div class="d-flex align-items-center">
+                <div class="profile">
+                  <img src="../../assets/images/@profile.jpg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="name">홍길동</div>
+                  <div class="role">슈퍼관리자</div>
+                </div>
+              </div>
+            </div>
+            <ul class="user-menu">
+              <li>
+                <a href="#none">
+                  <span><i class="icon-sidebar-edit"></i>프로필 편집</span>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <span><i class="icon-sidebar-logout"></i>로그아웃</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <main id="main">
+          <div class="container-fluid">
+            <!-- 페이지 타이틀 영역 -->
+            <div class="page-top">
+              <h1 class="page-title">
+                <a href="javascript:history.back();"><i class="fa-solid fa-arrow-left me-2"></i></a>
+                SLBS Wallpapers
+              </h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">데이터 리포트</li>
+                  <li class="breadcrumb-item">테마 리포트</li>
+                  <li class="breadcrumb-item">테마 리포트 상세</li>
+                  <li class="breadcrumb-item">SLBS Wallpapers</li>
+                </ol>
+              </nav>
+            </div>
+            <!-- //페이지 타이틀 영역 -->
+
+            <!-- 탭 -->
+            <nav class="mb-4">
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a href="tema_report_detail_wallpaper_category_list.html" class="nav-link active" role="tab" aria-controls="nav-home" aria-selected="true">카테고리</a>
+                <a href="tema_report_detail_wallpaper_wallpaper_list.html" class="nav-link" role="tab" aria-controls="nav-profile" aria-selected="false">월페이퍼</a>
+              </div>
+            </nav>
+            <!-- 탭 끝 -->
+
+            <!-- table -->
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th class="text-start">카테고리명</th>
+                  <th class="text-start">월페이퍼 등록 수</th>
+                  <th class="text-start">누적 다운로드 수 (전체 합계)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-start"><a href="">LIFESTYLE</a></td>
+                  <td class="text-start">45</td>
+                  <td class="text-start">1,249,560</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start"><a href="">LIFESTYLE</a></td>
+                  <td class="text-start">45</td>
+                  <td class="text-start">1,249,560</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start"><a href="">LIFESTYLE</a></td>
+                  <td class="text-start">45</td>
+                  <td class="text-start">1,249,560</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start"><a href="">LIFESTYLE</a></td>
+                  <td class="text-start">45</td>
+                  <td class="text-start">1,249,560</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start"><a href="">LIFESTYLE</a></td>
+                  <td class="text-start">45</td>
+                  <td class="text-start">1,249,560</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start"><a href="">LIFESTYLE</a></td>
+                  <td class="text-start">45</td>
+                  <td class="text-start">1,249,560</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start"><a href="">LIFESTYLE</a></td>
+                  <td class="text-start">45</td>
+                  <td class="text-start">1,249,560</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start"><a href="">LIFESTYLE</a></td>
+                  <td class="text-start">45</td>
+                  <td class="text-start">1,249,560</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start"><a href="">LIFESTYLE</a></td>
+                  <td class="text-start">45</td>
+                  <td class="text-start">1,249,560</td>
+                </tr>
+
+                <tr>
+                  <td class="text-start"><a href="">LIFESTYLE</a></td>
+                  <td class="text-start">45</td>
+                  <td class="text-start">1,249,560</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- //table -->
+          </div>
+          <!-- //container-fluid -->
+        </main>
+        <!-- //main -->
+      </div>
+    </div>
+    <!-- //wrap -->
+    <!-- modal: 우편번호 찾기 -->
+    <div class="modal" tabindex="-1" id="modal-zipcode">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">우편번호 찾기</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-10px">찾고자 하시는 지역의 이름을 입력하세요. 예)을지로, 퇴계로</p>
+            <div class="filter-area py-3 mb-20px">
+              <div class="row gx-2 justify-content-center align-items-center">
+                <label class="col-auto col-form-label">지역명</label>
+                <div class="col-auto">
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-danger">검색</button>
+                </div>
+              </div>
+            </div>
+            <table class="table table-bordered table-hover">
+              <colgroup>
+                <col style="width: 100px" />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="text-center">우편번호</th>
+                  <th class="text-center">주소</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">12345</td>
+                  <td class="text-start">
+                    <a href="javascript:;">서울특별시 중구 을지로5길 26</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">12345</td>
+                  <td class="text-start">
+                    <a href="javascript:;">서울특별시 중구 을지로5길 26</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">12345</td>
+                  <td class="text-start">
+                    <a href="javascript:;">서울특별시 중구 을지로5길 26</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="text-center">
+                    <p class="text-secondary py-2">데이터가 없습니다.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- pagination -->
+            <nav>
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="First">
+                    <span class="material-icons"> keyboard_double_arrow_left </span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span class="material-icons"> keyboard_arrow_left </span>
+                  </a>
+                </li>
+                <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span class="material-icons"> keyboard_arrow_right </span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Last">
+                    <span class="material-icons"> keyboard_double_arrow_right </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- //pagination -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal: 비밀번호 재설정 -->
+    <div class="modal" tabindex="-1" id="modal-password-reset">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">비밀번호 재설정</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered">
+              <colgroup>
+                <col style="width: 130px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>비밀번호*</th>
+                  <td><input type="password" class="form-control" placeholder="새로운 비밀번호 입력" /></td>
+                </tr>
+                <tr>
+                  <th>비밀번호 확인*</th>
+                  <td><input type="password" class="form-control" placeholder="비밀번호 재입력" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-dark">변경</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal: 회원정보 수정 -->
+    <div class="modal" tabindex="-1" id="modal-member-reset">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">회원 정보 수정</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered">
+              <colgroup>
+                <col style="width: 130px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>이름</th>
+                  <td><input type="text" class="form-control" value="정용채" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-dark">변경</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal: 새 카테고리 등록 > 월페이퍼 추가  > 불러오기 -->
+    <div class="modal" tabindex="-1" id="modal-wallpaper-category">
+      <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable" style="width: 1400px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">월페이퍼 추가</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- 필터 영역 -->
+            <div class="filter-area d-flex justify-content-between">
+              <div class="hstack gap-3">
+                <select name="" id="" class="form-select w-auto">
+                  <option value="">전체 카테고리</option>
+                </select>
+                <select name="" id="" class="form-select w-auto">
+                  <option value="">전체 종류</option>
+                </select>
+                <select name="" id="" class="form-select w-auto">
+                  <option value="">전체 가격</option>
+                </select>
+                <select name="" id="" class="form-select w-auto">
+                  <option value="">전체 배포상태</option>
+                </select>
+                <div class="hstack gap-3">
+                  <input type="text" class="form-control" placeholder="파일명 또는 카테고리명으로 검색" style="width: 250px" />
+                  <button type="button" class="btn btn-dark">검색</button>
+                </div>
+              </div>
+
+              <p class="text-danger hstack gap-2">
+                <i class="fa-solid fa-check"></i>
+                2개 선택됨
+              </p>
+            </div>
+            <!-- 필터 영역 끝  -->
+
+            <div class="overflow-y-auto p-4 category-thumb-container" style="max-height: 500px">
+              <ul class="category-thumb-wrap">
+                <li>
+                  <label for="wallpaper-check-0" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-0" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-1" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-1" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-2" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-2" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-3" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-3" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-4" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-4" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-5" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-5" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-6" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-6" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-7" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-7" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-8" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-8" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-9" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-9" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-10" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-10" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-11" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-11" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-12" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-12" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-13" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-13" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="wallpaper-check-14" class="wallpaper-category-thumb vstack">
+                    <input type="checkbox" class="form-check-input" id="wallpaper-check-14" />
+                    <div class="thumbnail w-100">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                      <!-- 이미지 없을때  (아래) -->
+                      <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                    </div>
+                    <p class="mt-3">lifestlye-05.jpg</p>
+                    <p>Still / 무료 / 배포 / 2022.10.25</p>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-dark">불러오기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal: 테마 > certification > 정품인증서 등록 -->
+    <div class="modal" tabindex="-1" id="modal-enroll-authenticity">
+      <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable" style="width: 1400px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">정품인증서 등록</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered">
+              <colgroup>
+                <col style="width: 200px" />
+                <col />
+                <col style="width: 200px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>정품인증 구분</th>
+                  <td colspan="3">
+                    <div class="hstack gap-2">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="authenticity-fine" value="fine-authenticity" name="authenticity" checked />
+                        <label class="form-check-label" for="authenticity-fine">명품</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="authenticity-art" value="art-authenticity" name="authenticity" />
+                        <label class="form-check-label" for="authenticity-art">아트</label>
+                      </div>
+                      <div>* 등록 후 수정 불가능</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>카드 이미지 (1:1)*</th>
+                  <td>
+                    <div class="hstack gap-4">
+                      <div class="thumbnail">
+                        <!-- <img src="../../assets/images/@landscape.jpg" alt=""> -->
+                        <!-- 이미지 없을때 (아래) -->
+                        <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div>
+                      </div>
+                      <div class="vstack gap-2 justify-content-center">
+                        <input type="file" name="" id="image_upload" class="visually-hidden" />
+                        <label for="image_upload" class="btn btn-dark width-150px">이미지 업로드</label>
+                        <button type="button" class="btn btn-outline-dark width-150px">이미지 삭제</button>
+                      </div>
+                    </div>
+                  </td>
+                  <th>배경 이미지 (3:4)*</th>
+                  <td>
+                    <div class="hstack gap-4">
+                      <div class="thumbnail ratio ratio-4x3" style="width: 200px">
+                        <!-- <img src="../../assets/images/@landscape.jpg" alt=""> -->
+                        <!-- 이미지 없을때 (아래) -->
+                        <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div>
+                      </div>
+                      <div class="vstack gap-2 justify-content-center">
+                        <input type="file" name="" id="image_upload" class="visually-hidden" />
+                        <label for="image_upload" class="btn btn-dark width-150px">이미지 업로드</label>
+                        <button type="button" class="btn btn-outline-dark width-150px">이미지 삭제</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>제품명*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="제품명 입력" /></td>
+                </tr>
+              </tbody>
+
+              <!-- 명품일때 보임 -->
+              <tbody id="fine-authenticity">
+                <tr>
+                  <th>제품 가격*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="제품 가격 입력" /></td>
+                </tr>
+                <tr>
+                  <th>제품 카테고리*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="제품 카테고리 (가방, 지갑 등) 입력" /></td>
+                </tr>
+                <tr>
+                  <th>모델번호*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="제품 모델번호 입력" /></td>
+                </tr>
+                <tr>
+                  <th>검증여부*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="검증여부 입력" /></td>
+                </tr>
+                <tr>
+                  <th>보증기간*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="보증기간 입력" /></td>
+                </tr>
+              </tbody>
+              <!-- 명품일때 보임 끝-->
+
+              <!-- 아트일때 보임 -->
+              <tbody id="art-authenticity" style="display: none">
+                <tr>
+                  <th>제작연도</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="제작연도입력" /></td>
+                </tr>
+                <tr>
+                  <th>재료</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="작품 재료 입력" /></td>
+                </tr>
+                <tr>
+                  <th>크기</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="작품 크기 입력" /></td>
+                </tr>
+                <tr>
+                  <th>참고사항</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="참고사항 입력" /></td>
+                </tr>
+                <tr>
+                  <th>참고사항 입력*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="참고사항 입력" /></td>
+                </tr>
+                <tr>
+                  <th>정품인증일시*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="YYYY.MM.DD" /></td>
+                </tr>
+                <tr>
+                  <th>작가 서명</th>
+                  <td colspan="3">
+                    <div class="hstack gap-4">
+                      <div class="thumbnail ratio ratio-4x3" style="width: 200px">
+                        <!-- <img src="../../assets/images/@landscape.jpg" alt=""> -->
+                        <!-- 이미지 없을때 (아래) -->
+                        <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div>
+                      </div>
+                      <div class="vstack gap-2 justify-content-center">
+                        <input type="file" name="" id="image_upload" class="visually-hidden" />
+                        <label for="image_upload" class="btn btn-dark width-150px">이미지 업로드</label>
+                        <button type="button" class="btn btn-outline-dark width-150px">이미지 삭제</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <!-- 아트일때 보임 끝 -->
+            </table>
+          </div>
+          <script>
+            $('input[name="authenticity"]').change(function () {
+              if ($('input[name="authenticity"]:checked').val() === 'fine-authenticity') {
+                $('#art-authenticity').hide();
+                $('#fine-authenticity').show();
+              } else {
+                $('#art-authenticity').show();
+                $('#fine-authenticity').hide();
+              }
+            });
+          </script>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-dark">등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal: 테마 > certification > 정품인증서 상세 > 명품 / 상세-->
+    <div class="modal" tabindex="-1" id="modal-detail-authenticity">
+      <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable" style="width: 1400px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">정품인증서 상세</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered">
+              <colgroup>
+                <col style="width: 200px" />
+                <col />
+                <col style="width: 200px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>정품인증 구분</th>
+                  <td colspan="3">명품</td>
+                </tr>
+                <tr>
+                  <th>카드 이미지 (1:1)*</th>
+                  <td>
+                    <div class="hstack gap-4">
+                      <div class="thumbnail">
+                        <img src="../../assets/images/@landscape.jpg" alt="" />
+                        <!-- 이미지 없을때 (아래) -->
+                        <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                      </div>
+                      <div class="vstack gap-2 justify-content-center">
+                        <input type="file" name="" id="image_upload" class="visually-hidden" />
+                        <label for="image_upload" class="btn btn-dark width-150px">이미지 업로드</label>
+                        <button type="button" class="btn btn-outline-dark width-150px">이미지 삭제</button>
+                      </div>
+                    </div>
+                  </td>
+                  <th>배경 이미지 (3:4)*</th>
+                  <td>
+                    <div class="hstack gap-4">
+                      <div class="thumbnail ratio ratio-4x3" style="width: 200px">
+                        <img src="../../assets/images/@landscape.jpg" alt="" />
+                        <!-- 이미지 없을때 (아래) -->
+                        <!-- <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div> -->
+                      </div>
+                      <div class="vstack gap-2 justify-content-center">
+                        <input type="file" name="" id="image_upload" class="visually-hidden" />
+                        <label for="image_upload" class="btn btn-dark width-150px">이미지 업로드</label>
+                        <button type="button" class="btn btn-outline-dark width-150px">이미지 삭제</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>제품명*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="제품명 입력" /></td>
+                </tr>
+              </tbody>
+
+              <!-- 명품일때 보임 -->
+              <tbody id="fine-authenticity">
+                <tr>
+                  <th>제품 가격*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="제품 가격 입력" /></td>
+                </tr>
+                <tr>
+                  <th>제품 카테고리*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="제품 카테고리 (가방, 지갑 등) 입력" /></td>
+                </tr>
+                <tr>
+                  <th>모델번호*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="제품 모델번호 입력" /></td>
+                </tr>
+                <tr>
+                  <th>검증여부*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="검증여부 입력" /></td>
+                </tr>
+                <tr>
+                  <th>보증기간*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="보증기간 입력" /></td>
+                </tr>
+              </tbody>
+              <!-- 명품일때 보임 끝-->
+
+              <!-- 아트일때 보임 -->
+              <tbody id="art-authenticity">
+                <tr>
+                  <th>제작연도</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="제작연도입력" /></td>
+                </tr>
+                <tr>
+                  <th>재료</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="작품 재료 입력" /></td>
+                </tr>
+                <tr>
+                  <th>크기</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="작품 크기 입력" /></td>
+                </tr>
+                <tr>
+                  <th>참고사항</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="참고사항 입력" /></td>
+                </tr>
+                <tr>
+                  <th>참고사항 입력*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="참고사항 입력" /></td>
+                </tr>
+                <tr>
+                  <th>정품인증일시*</th>
+                  <td colspan="3"><input type="text" class="form-control" placeholder="YYYY.MM.DD" /></td>
+                </tr>
+                <tr>
+                  <th>작가 서명</th>
+                  <td colspan="3">
+                    <div class="hstack gap-4">
+                      <div class="thumbnail ratio ratio-4x3" style="width: 200px">
+                        <!-- <img src="../../assets/images/@landscape.jpg" alt=""> -->
+                        <!-- 이미지 없을때 (아래) -->
+                        <div class="hstack justify-content-center h-100 w-100"><i class="icon-no-img"></i></div>
+                      </div>
+                      <div class="vstack gap-2 justify-content-center">
+                        <input type="file" name="" id="image_upload" class="visually-hidden" />
+                        <label for="image_upload" class="btn btn-dark width-150px">이미지 업로드</label>
+                        <button type="button" class="btn btn-outline-dark width-150px">이미지 삭제</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <!-- 아트일때 보임 끝 -->
+            </table>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-dark">저장</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal: 시리얼 넘버 > 시리얼넘버발행 > 발행체계생성 > 오리지널/콜라보레이션 -->
+    <div class="modal" tabindex="-1" id="modal-serial-original-tema">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">테마 선택</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="filter-area py-3 mb-20px">
+              <div class="row gx-2 justify-content-center align-items-center">
+                <div class="col-auto">
+                  <select name="" id="" class="form-select">
+                    <option value="">전체 테마</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="키워드를 입력하세요" />
+                </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-dark">검색</button>
+                </div>
+              </div>
+            </div>
+
+            <p class="font-13px fw-bold mb-3 mt-4">선택된 테마 : <span class="fw-extrabold">Collaboration / CL Cherry On Top</span></p>
+            <table class="table table-bordered table-hover">
+              <colgroup>
+                <col style="width: 180px" />
+                <col style="width: 13%" />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="text-center">썸네일</th>
+                  <th class="text-center">테마 구분</th>
+                  <th class="text-center">테마 이름</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="thumbnail m-auto">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                    </div>
+                  </td>
+                  <td class="text-center">Collaboration</td>
+                  <td class="text-start">
+                    <a href="javascript:;">CL Cherry On Top</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="thumbnail m-auto">
+                      <img src="../../assets/images/@landscape.jpg" alt="" />
+                    </div>
+                  </td>
+                  <td class="text-center">Original</td>
+                  <td class="text-start">
+                    <a href="javascript:;">CL Cherry On Top</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="hstack justify-content-between">
+              <div>294 - 324 / 324</div>
+              <!-- pagination -->
+              <nav>
+                <ul class="pagination justify-content-center m-0">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="First">
+                      <span class="material-icons"> keyboard_double_arrow_left </span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span class="material-icons"> keyboard_arrow_left </span>
+                    </a>
+                  </li>
+                  <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span class="material-icons"> keyboard_arrow_right </span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Last">
+                      <span class="material-icons"> keyboard_double_arrow_right </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- //pagination -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-dark">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal: 시리얼 넘버 > 시리얼넘버발행 > 발행체계생성 > 정품인증용 -->
+    <div class="modal" tabindex="-1" id="modal-serial-certification-tema">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">테마 선택</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="filter-area py-3 mb-20px">
+              <div class="row gx-2 justify-content-center align-items-center">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="키워드를 입력하세요" />
+                </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-dark">검색</button>
+                </div>
+              </div>
+            </div>
+
+            <p class="font-13px fw-bold mb-3 mt-4">선택된 테마 : <span class="fw-extrabold">Collaboration / CL Cherry On Top</span></p>
+            <table class="table table-bordered table-hover">
+              <colgroup>
+                <col style="width: 180px" />
+                <col style="width: 13%" />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="text-center">썸네일</th>
+                  <th class="text-center">테마 구분</th>
+                  <th class="text-center">테마 이름</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="thumbnail m-auto">
+                      <img src="../../assets/images/@portrait.jpg" alt="" />
+                    </div>
+                  </td>
+                  <td class="text-center">Collaboration</td>
+                  <td class="text-start">
+                    <a href="javascript:;">CL Cherry On Top</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="thumbnail m-auto">
+                      <img src="../../assets/images/@landscape.jpg" alt="" />
+                    </div>
+                  </td>
+                  <td class="text-center">Original</td>
+                  <td class="text-start">
+                    <a href="javascript:;">CL Cherry On Top</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="hstack justify-content-between">
+              <div>294 - 324 / 324</div>
+              <!-- pagination -->
+              <nav>
+                <ul class="pagination justify-content-center m-0">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="First">
+                      <span class="material-icons"> keyboard_double_arrow_left </span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span class="material-icons"> keyboard_arrow_left </span>
+                    </a>
+                  </li>
+                  <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span class="material-icons"> keyboard_arrow_right </span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Last">
+                      <span class="material-icons"> keyboard_double_arrow_right </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- //pagination -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-dark">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal: 시리얼 넘버 > 시리얼 넘버 목록 > 시리얼 넘버 소유자 히스토리 (오리지널/콜라보레이션 & 자격증명 통합) -->
+    <div class="modal" tabindex="-1" id="modal-serial-history">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">시리얼넘버 소유자 히스토리</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Original/Collaboration 테마용 -->
+            <table class="table table-bordered table-center">
+              <thead>
+                <tr>
+                  <th>닉네임</th>
+                  <th>이름</th>
+                  <th>디바이스 정보</th>
+                  <th>NFC 인증일</th>
+                  <th>NFC 해제일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>alpaca</td>
+                  <td>정용채</td>
+                  <td>G9SKFIG73</td>
+                  <td>2022.10.20</td>
+                  <td>2022.11.10</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- Original/Collaboration 테마용 끝-->
+
+            <!-- Certification 테마용 -->
+            <table class="table table-bordered table-center">
+              <thead>
+                <tr>
+                  <th>소유 순번</th>
+                  <th>닉네임</th>
+                  <th>이름</th>
+                  <th>NFC 인증일</th>
+                  <th>NFC 해제일</th>
+                  <th>현재 소유</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3</td>
+                  <td>alpaca</td>
+                  <td>정용채</td>
+                  <td>2022.10.20</td>
+                  <td>2022.11.10</td>
+                  <td>
+                    <i class="fa-solid fa-o text-primary"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- Certification 테마용 끝-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal: 푸시알림 > 테마알림 > 수신 회원 선택-->
+    <div class="modal" tabindex="-1" id="modal-push-select-person">
+      <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable" style="width: 1400px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">수신 회원 선택</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex gap-5 align-items-end">
+              <!-- 왼쪽 -->
+              <div class="vstack gap-3 col-6">
+                <div class="row gx-2 justify-content-center align-items-center">
+                  <div class="col-auto">
+                    <select name="" id="" class="form-select">
+                      <option value="">닉네임</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="키워드를 입력하세요" />
+                  </div>
+                  <div class="col-auto">
+                    <button type="button" class="btn btn-dark">검색</button>
+                  </div>
+                </div>
+
+                <div class="hstack gap-2 justify-content-end">
+                  <button type="button" class="btn btn-dark">전체 추가</button>
+                  <button type="button" class="btn btn-outline-dark">선택 추가</button>
+                </div>
+
+                <div class="">
+                  <div class="table-responsive" style="height: 419px">
+                    <table class="table table-bordered mb-0">
+                      <thead>
+                        <tr>
+                          <th class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </th>
+                          <th class="text-start">닉네임</th>
+                          <th class="text-start">이름</th>
+                          <th class="text-start">아이디</th>
+                          <th class="text-start">이메일</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="hstack justify-content-between" style="min-height: 42px">
+                  <!-- 내용 없으면 이 아래 부분만 없애세요 -->
+                  <div>294 - 324 / 324</div>
+                  <!-- pagination -->
+                  <nav>
+                    <ul class="pagination justify-content-center m-0">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="First">
+                          <span class="material-icons"> keyboard_double_arrow_left </span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span class="material-icons"> keyboard_arrow_left </span>
+                        </a>
+                      </li>
+                      <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span class="material-icons"> keyboard_arrow_right </span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Last">
+                          <span class="material-icons"> keyboard_double_arrow_right </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <!-- //pagination -->
+                  <!-- 내용 없으면 이 아래 부분만 없애세요 끝 -->
+                </div>
+              </div>
+              <!-- 왼쪽 끝 -->
+
+              <!-- 오른쪽  -->
+              <div class="gap-3 col-6">
+                <div class="hstack justify-content-between mb-3">
+                  <div class="fw-bold font-14px">선택된 회원 : 1000명</div>
+
+                  <div class="hstack gap-2">
+                    <button type="button" class="btn btn-dark">전체 삭제</button>
+                    <button type="button" class="btn btn-outline-dark">선택 추가</button>
+                  </div>
+                </div>
+
+                <div class="pb-3">
+                  <div class="table-responsive" style="height: 419px">
+                    <table class="table table-bordered mb-0">
+                      <thead>
+                        <tr>
+                          <th class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </th>
+                          <th class="text-start">닉네임</th>
+                          <th class="text-start">이름</th>
+                          <th class="text-start">아이디</th>
+                          <th class="text-start">이메일</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+
+                        <tr>
+                          <td class="text-center">
+                            <input type="checkbox" class="form-check-input m-0 align-middle" />
+                          </td>
+                          <td class="text-start">alpaca</td>
+                          <td class="text-start">정용채</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                          <td class="text-start">slashbslash@naver.com</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="hstack justify-content-between" style="min-height: 42px">
+                  <!-- 내용 없으면 이 아래 부분만 없애세요 -->
+                  <div>294 - 324 / 324</div>
+                  <!-- pagination -->
+                  <nav>
+                    <ul class="pagination justify-content-center m-0">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="First">
+                          <span class="material-icons"> keyboard_double_arrow_left </span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span class="material-icons"> keyboard_arrow_left </span>
+                        </a>
+                      </li>
+                      <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span class="material-icons"> keyboard_arrow_right </span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Last">
+                          <span class="material-icons"> keyboard_double_arrow_right </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <!-- //pagination -->
+                  <!-- 내용 없으면 이 아래 부분만 없애세요 끝 -->
+                </div>
+              </div>
+              <!-- 오른쪽 끝 -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-dark">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal: 약관 및 버전 > 버전 추가 -->
+    <div class="modal" tabindex="-1" id="modal-password-reset">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">버전 추가</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered">
+              <colgroup>
+                <col style="width: 130px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>버전</th>
+                  <td><input type="password" class="form-control" placeholder="ex) v1.0" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-dark">추가</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
