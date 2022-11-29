@@ -16,7 +16,7 @@
           <!-- //페이지 타이틀 영역 -->
 
           <!-- 필터 영역 -->
-          <div class="filter-area">
+          <div class="filter-area bg-light p-4 mb-4 border-0">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
                 <div class="hstack gap-2">
@@ -107,31 +107,65 @@
       window.chart1 = new Chart(chartview1, lineConfig);
     };
   });
+
   const chartData1 = {
-    labels: ['2020', '2021', ' 2022'],
+    labels: ['2020.10.12', '2020.10.13', '2020.10.14', '2020.10.15', '2020.10.16', '2020.10.17', '2020.10.18', '2020.10.19', '2020.10.20', '2020.10.21', '2020.10.22', '2020.10.22', '2020.10.23', '2020.10.24', '2020.10.25', '2020.10.26', '2020.10.27', '2020.10.28'],
     datasets: [{
-      data: ['22', '30', '24'],
-      fill: false,
-      borderColor: "black",
-      backgroundColor: "#00d689",
-      borderWidth: 1.2,
-    }]
+        type: 'line', //
+        label: '가입회원(일일)',
+        borderColor:'rgba(0, 106, 255, 1)',
+        backgroundColor:'rgba(0, 106, 255, 1)',
+        data: ['10', '20', '30', '40', '50', '60', '70', '80', '90', '92', '95', '85', '75', '50', '65', '54', '48', '80'],
+        borderWidth: 2,
+      },
+      {
+        type: 'line', //
+        label: '휴면회원(일일)',
+        borderColor:  'rgba(144, 190, 255, 1)',
+        backgroundColor: 'rgba(144, 190, 255, 1)',
+        data: ['20', '30', '40', '50', '60', '70', '80', '90', '80', '82', '85', '75', '85', '60', '75', '64', '58', '70'],
+        borderWidth: 2,
+      },
+      {
+        type: 'line', //
+        label: '탈퇴회원 (일일)',
+        borderColor:  'rgba(0, 0, 0, 1)',
+        backgroundColor: 'rgba(0, 0, 0, 1)',
+        data: ['40', '50', '60', '20', '30', '40', '30', '40', '50', '62', '75', '65', '65', '70', '85', '74', '68', '90'],
+        borderWidth: 2,
+      },
+      {
+        type: 'bar', //
+        label: '가입회원 (전체)',
+        borderColor: 'rgba(204, 204, 204, 1)',
+        backgroundColor: 'rgba(204, 204, 204, 0.5)',
+        data: ['80', '70', '60', '58', '65', '75', '45', '56', '58', '78', '45', '58', '48', '58', '80', '58', '58', '90'],
+        stack: 'combined',
+      },
+    ]
   };
+
   const lineConfig = {
-    type: 'scatter',
+    type: 'line',
     data: chartData1,
     options: {
-      responsive: true,
+      maintainAspectRatio: false, //상위 div를 무시한 채 창 크기에 따라 크기가 크기가 마음대로 바뀌던 것이 상위 div에 구속된다
       plugins: {
-        legend: {
-          position: 'top',
-        },
         title: {
           display: false,
-        }
+        },
+
       },
-      y: {
-        beginAtZero: true,// 0부터 시작
+      interaction: {
+        mode: 'index',
+        intersect: false,
+      },
+      scales: {
+        y: {
+          // stacked: true,
+          beginAtZero: true, // 0부터 시작
+          suggestedMax: 150,
+        }
       }
     },
   };

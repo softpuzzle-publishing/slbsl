@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      @@include('@@webRoot/html/_include/_aside.html')
+      <main id="main">
+        <div class="container-fluid">
+          <!-- 페이지 타이틀 영역 -->
+          @@include('@@webRoot/html/_include/_page_top.html', { "title" : "데이터 리포트", "breadcrumb": { "dep2": "앱 리포트" } })
+          <!-- //페이지 타이틀 영역 -->
+
+          <div class="mt-5 mb-3 fs-5 fw-bold">방문자 수</div>
+
+          <!-- 필터 영역 -->
+          <div class="filter-area  bg-light p-4 mb-4 border-0">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <div class="hstack gap-2">
+                  <span class="fw-bold">현재</span>
+                  <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" readonly disabled />
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="row g-2 align-items-center">
+                  <div class="col-auto">시작일</div>
+                  <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                  </div>
+                  <div class="col-auto">~</div>
+                  <div class="col-auto">종료일</div>
+                  <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <select name="" id="" class="form-select width-150px">
+                  <option value="">자동기간</option>
+                </select>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-dark" style="min-width: 80px">적용</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-outline-dark" style="min-width: 80px">초기화</button>
+              </div>
+            </div>
+          </div>
+          <!-- //필터 영역 -->
+
+          <!-- 차트 -->
+          <div class="chart-area">
+            <canvas id="visitant-chart"></canvas>
+          </div>
+          <!-- 차트 끝 -->
+
+          <!-- ---- -->
+
+          <div class="pt-5 mb-3 fs-5 fw-bold border-top border-dark">순 방문자 수</div>
+
+          <!-- 필터 영역 -->
+          <div class="filter-area bg-light p-4 mb-4 border-0">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <div class="hstack gap-2">
+                  <span class="fw-bold">현재</span>
+                  <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" readonly disabled />
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="row g-2 align-items-center">
+                  <div class="col-auto">시작일</div>
+                  <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                  </div>
+                  <div class="col-auto">~</div>
+                  <div class="col-auto">종료일</div>
+                  <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <select name="" id="" class="form-select width-150px">
+                  <option value="">자동기간</option>
+                </select>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-dark" style="min-width: 80px">적용</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-outline-dark" style="min-width: 80px">초기화</button>
+              </div>
+            </div>
+          </div>
+          <!-- //필터 영역 -->
+
+          <!-- 테이블 -->
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>
+                  <div class="hstack gap-2">
+                    <div class="chart-label green"></div>
+                    DAU (1일 활성 사용자 수)
+                  </div>
+                </th>
+                <th>
+                  <div class="hstack gap-2">
+                    <div class="chart-label blue"></div>
+                    WAU (7일 활성 사용자 수)
+                  </div>
+                </th>
+                <th>
+                  <div class="hstack gap-2">
+                    <div class="chart-label light-blue"></div>
+                    MAU (28일 활성 사용자 수)
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>40</td>
+                <td>75</td>
+                <td>125</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- 테이블 끝 -->
+
+          <!-- 차트 -->
+          <div class="chart-area">
+            <canvas id="visitant2-chart"></canvas>
+          </div>
+          <!-- 차트 끝 -->
+
+
+          <!-- ---- -->
+
+          <div class="pt-5 mb-3 fs-5 fw-bold border-top border-dark">앱 다운로드 수</div>
+          <!-- 필터 영역 -->
+          <div class="filter-area bg-light p-4 mb-4 border-0">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <div class="hstack gap-2">
+                  <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" readonly disabled />
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="row g-2 align-items-center">
+                  <div class="col-auto">시작일</div>
+                  <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                  </div>
+                  <div class="col-auto">~</div>
+                  <div class="col-auto">종료일</div>
+                  <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <select name="" id="" class="form-select width-150px">
+                  <option value="">자동기간</option>
+                </select>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-dark" style="min-width: 80px">적용</button>
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-outline-dark" style="min-width: 80px">초기화</button>
+              </div>
+            </div>
+          </div>
+          <!-- //필터 영역 -->
+
+          <!-- 테이블 -->
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>
+                  <div class="hstack gap-2">
+                    <div class="chart-label blue"></div>
+                    Apple App Store (전체 합계)
+                  </div>
+                </th>
+                <th>
+                  <div class="hstack gap-2">
+                    <div class="chart-label green"></div>
+                    Google Play Store (전체 합계)
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3,500</td>
+                <td>3,420</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- 테이블 끝 -->
+
+          <!-- 차트 -->
+          <div class="chart-area">
+            <canvas id="app-chart"></canvas>
+          </div>
+          <!-- 차트 끝 -->
+
+        </div>
+        <!-- //container-fluid -->
+      </main>
+      <!-- //main -->
+    </div>
+  </div>
+  <!-- //wrap -->
+  @@include('@@webRoot/html/_include/_modal.html')
+</body>
+
+<script>
+  $(document).ready(function () {
+    window.onload = function () {
+      // 방문자 수 차트 로드
+      var chartviewVisitant = document.getElementById('visitant-chart').getContext('2d');
+      window.chart1 = new Chart(chartviewVisitant, visitantConfig);
+      // 방문자 수 차트 로드 끝 
+
+      // 순 방문자 수 차트 로드
+      var chartviewVisitant2 = document.getElementById('visitant2-chart').getContext('2d');
+      window.chart2 = new Chart(chartviewVisitant2, visitantConfig2);
+      // 순 방문자 수 차트 로드 끝 
+
+      // 앱 다운로드 수 차트 로드
+      var chartviewVisitant3 = document.getElementById('app-chart').getContext('2d');
+      window.chart3 = new Chart(chartviewVisitant3, visitantConfig3);
+      // 앱 다운로드 수 차트 로드 끝 
+    };
+  });
+  // 방문자 수 차트 데이터
+  const visitantData = {
+    labels: ['2020.10.12', '2020.10.13', '2020.10.14', '2020.10.15', '2020.10.16', '2020.10.17', '2020.10.18', '2020.10.19', '2020.10.20', '2020.10.21', '2020.10.22', '2020.10.22', '2020.10.23', '2020.10.24', '2020.10.25', '2020.10.26', '2020.10.27', '2020.10.28'],
+    datasets: [{
+        type: 'line', //
+        label: '방문자 수(일일)',
+        borderColor: 'rgba(0, 106, 255, 1)',
+        backgroundColor: 'rgba(0, 106, 255, 1)',
+        data: ['20', '30', '40', '50', '60', '70', '80', '90', '80', '82', '85', '75', '85', '60', '75', '64', '58', '70'],
+        borderWidth: 2,
+      },
+      {
+        type: 'bar', //
+        label: '방문자 수(누적) ',
+        borderColor: 'rgba(204, 204, 204, 1)',
+        backgroundColor: 'rgba(204, 204, 204, 0.5)',
+        data: ['80', '70', '60', '58', '65', '75', '45', '56', '58', '78', '45', '58', '48', '58', '80', '58', '58', '90'],
+        stack: 'combined',
+      },
+    ]
+  };
+  // 방문자 수 차트 데이터 끝
+  // 방문자 수 차트 데이터 활성화
+  const visitantConfig = {
+    type: 'line',
+    data: visitantData,
+    options: {
+      maintainAspectRatio: false, //상위 div를 무시한 채 창 크기에 따라 크기가 크기가 마음대로 바뀌던 것이 상위 div에 구속된다
+      plugins: {
+        title: {
+          display: false,
+        },
+      },
+      interaction: {
+        mode: 'index',
+        intersect: false,
+      },
+      scales: {
+        y: {
+          // stacked: true,
+          beginAtZero: true, // 0부터 시작
+          suggestedMax: 100,
+        }
+      }
+    },
+  };
+  // 방문자 수 차트 데이터 활성화 끝
+
+  //  순 방 문자 수 차트 데이터
+  const visitantData2 = {
+    labels: ['2020.10.12', '2020.10.13', '2020.10.14', '2020.10.15', '2020.10.16', '2020.10.17', '2020.10.18', '2020.10.19', '2020.10.20', '2020.10.21', '2020.10.22', '2020.10.22', '2020.10.23', '2020.10.24', '2020.10.25', '2020.10.26', '2020.10.27', '2020.10.28'],
+    datasets: [{
+        type: 'line', //
+        label: 'DAU',
+        borderColor: 'rgb(99, 221, 140)',
+        backgroundColor: 'rgb(99, 221, 140)',
+        data: ['20', '30', '40', '50', '60', '70', '80', '90', '80', '82', '85', '75', '85', '60', '75', '64', '58', '70'],
+        borderWidth: 2,
+      },
+      {
+        type: 'line', //
+        label: 'WAU ',
+        borderColor: 'rgba(0, 106, 255, 1)',
+        backgroundColor: 'rgba(0, 106, 255, 1)',
+        data: ['80', '70', '60', '58', '65', '75', '45', '56', '58', '78', '45', '58', '48', '58', '80', '58', '58', '90'],
+      },
+      {
+        type: 'line', //
+        label: 'MAU',
+        borderColor: 'rgba(144, 190, 255, 1)',
+        backgroundColor: 'rgba(144, 190, 255, 1)',
+        data: ['40', '50', '60', '20', '30', '40', '30', '40', '50', '62', '75', '65', '65', '70', '85', '74', '68', '90'],
+      },
+    ]
+  };
+  //  순 방 문자 수 차트 데이터 끝
+  // 순 방 문자 수 차트 데이터 활성화
+  const visitantConfig2 = {
+    type: 'line',
+    data: visitantData2,
+    options: {
+      maintainAspectRatio: false, //상위 div를 무시한 채 창 크기에 따라 크기가 크기가 마음대로 바뀌던 것이 상위 div에 구속된다
+      plugins: {
+        title: {
+          display: false,
+        },
+      },
+      interaction: {
+        mode: 'index',
+        intersect: false,
+      },
+      scales: {
+        y: {
+          // stacked: true,
+          beginAtZero: true, // 0부터 시작
+          suggestedMax: 150,
+        }
+      }
+    },
+  };
+  // 순 방 문자 수 차트 데이터 활성화 끝
+
+  //  앱 차트 데이터
+  const visitantData3 = {
+    labels: ['2020.10.12', '2020.10.13', '2020.10.14', '2020.10.15', '2020.10.16', '2020.10.17', '2020.10.18', '2020.10.19', '2020.10.20', '2020.10.21', '2020.10.22', '2020.10.22', '2020.10.23', '2020.10.24', '2020.10.25', '2020.10.26', '2020.10.27', '2020.10.28'],
+    datasets: [{
+        type: 'line', //
+        label: 'Apple App Store(일일)',
+        borderColor: 'rgb(99, 221, 140)',
+        backgroundColor: 'rgb(99, 221, 140)',
+        data: ['10', '20', '30', '40', '50', '60', '70', '80', '90', '92', '95', '85', '75', '50', '65', '54', '48', '80'],
+        borderWidth: 2,
+      },
+      {
+        type: 'line', //
+        label: 'Google Play Store(일일)',
+        borderColor: 'rgba(0, 106, 255, 1)',
+        backgroundColor: 'rgba(0, 106, 255, 1)',
+        data: ['20', '30', '40', '50', '60', '70', '80', '90', '80', '82', '85', '75', '85', '60', '75', '64', '58', '70'],
+        borderWidth: 2,
+      },
+      {
+        type: 'bar', //
+        label: 'Apple App Store(누적)',
+        borderColor: 'rgb(99, 221, 140)',
+        backgroundColor: 'rgb(99, 221, 140, 0.15)',
+        data: ['80', '70', '60', '58', '65', '75', '45', '56', '58', '78', '45', '58', '48', '58', '80', '58', '58', '90'],
+        // stack: 'combined',
+      },
+      {
+        type: 'bar', //
+        label: 'Google Play Store(누적)',
+        borderColor: 'rgba(0, 106, 255, 1)',
+        backgroundColor: 'rgba(0, 106, 255, 0.15)',
+        data: ['80', '70', '60', '58', '65', '75', '45', '56', '58', '78', '45', '58', '48', '58', '80', '58', '58', '90'],
+        // stack: 'combined',
+      },
+    ]
+  };
+  //  앱 차트 데이터 끝
+  // 앱 차트 데이터 활성화
+  const visitantConfig3 = {
+    type: 'bar',
+    data: visitantData3,
+    options: {
+      maintainAspectRatio: false, //상위 div를 무시한 채 창 크기에 따라 크기가 크기가 마음대로 바뀌던 것이 상위 div에 구속된다
+      plugins: {
+        title: {
+          display: false,
+        },
+      },
+      interaction: {
+        mode: 'index',
+        intersect: false,
+      },
+      scales: {
+        x: {
+            grid: {
+              offset: true
+            }
+        },
+        y: {
+          // stacked: true,
+          beginAtZero: true, // 0부터 시작
+          suggestedMax: 150,
+        }
+      }
+    },
+  };
+  //  앱 차트 데이터 활성화 끝
+</script>
+
+</html>

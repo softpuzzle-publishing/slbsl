@@ -17,14 +17,13 @@
 
           <h2 class="fs-4 fw-extrabold border-bottom pb-2">Original / New Xeneration</h2>
 
-          <div class="mt-5 mb-2 fs-5 fw-bold">테마 활성(사용) 수</div>
+          <div class="mt-5 mb-3 fs-5 fw-bold">테마 활성(사용) 수</div>
 
           <!-- 필터 영역 -->
-          <div class="filter-area">
+          <div class="filter-area  bg-light p-4 mb-4 border-0">
             <div class="row g-3 align-items-center">
               <div class="col-auto">
                 <div class="hstack gap-2">
-                  <span class="fw-bold">현재</span>
                   <input type="text" class="form-control" placeholder="YYYY.MM.DD" data-picker="date" readonly="" disabled="">
                 </div>
               </div>
@@ -58,7 +57,7 @@
           
           <!-- 차트 -->
           <div class="chart-area">
-            <canvas id="chart"></canvas>
+            <canvas id="tema-chart"></canvas>
           </div>
           <!-- 차트 끝 -->
 
@@ -98,5 +97,50 @@
   <!-- //wrap -->
   @@include('@@webRoot/html/_include/_modal.html')
 </body>
+<script>
+  $(document).ready(function () {
+    window.onload = function () {
+      var chartviewTema = document.getElementById('tema-chart').getContext('2d');
+      window.chart1 = new Chart(chartviewTema, lineConfigTema);
+    };
+  });
 
+  const chartDataTema = {
+    labels: ['2020.10.12', '2020.10.13', '2020.10.14', '2020.10.15', '2020.10.16', '2020.10.17', '2020.10.18', '2020.10.19', '2020.10.20', '2020.10.21', '2020.10.22', '2020.10.22', '2020.10.23', '2020.10.24', '2020.10.25', '2020.10.26', '2020.10.27', '2020.10.28'],
+    datasets: [{
+        type: 'line', //
+        label: '테마 활성(사용) 수',
+        borderColor:'rgba(0, 106, 255, 1)',
+        backgroundColor:'rgba(0, 106, 255, 1)',
+        data: ['10', '20', '30', '40', '50', '60', '70', '80', '90', '92', '95', '85', '75', '50', '65', '54', '48', '80'],
+        borderWidth: 2,
+      }
+    ]
+  };
+
+  const lineConfigTema = {
+    type: 'line',
+    data: chartDataTema,
+    options: {
+      maintainAspectRatio: false, //상위 div를 무시한 채 창 크기에 따라 크기가 크기가 마음대로 바뀌던 것이 상위 div에 구속된다
+      plugins: {
+        title: {
+          display: false,
+        },
+
+      },
+      interaction: {
+        mode: 'index',
+        intersect: false,
+      },
+      scales: {
+        y: {
+          // stacked: true,
+          beginAtZero: true, // 0부터 시작
+          suggestedMax: 150,
+        }
+      }
+    },
+  };
+</script>
 </html>

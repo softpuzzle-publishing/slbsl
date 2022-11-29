@@ -48,3 +48,22 @@
     }
   }
 }
+
+
+.chart-label {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  &.green {
+    background-color: rgb(99, 221, 140);
+  }
+
+  &.blue {
+    background-color: rgba(0, 106, 255, 1);
+  }
+
+  &.light-blue {
+    background-color: rgba(144, 190, 255, 1);
+  }
+}
