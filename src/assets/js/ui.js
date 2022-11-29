@@ -23,7 +23,12 @@ let Common = {
         display: {
           theme: "dark",
           viewMode: "calendar",
+          components: {
+            clock: false
+        }
         },
+       
+
       });
       // eslint-disable-next-line no-undef
       datePickerInputs[i].dates.formatInput = (date) => moment(date).format("YYYY.MM.DD");

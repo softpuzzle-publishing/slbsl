@@ -24,7 +24,10 @@ var Common = {
       datePickerInputs[i] = new tempusDominus.TempusDominus($(this)[0], {
         display: {
           theme: "dark",
-          viewMode: "calendar"
+          viewMode: "calendar",
+          components: {
+            clock: false
+          }
         }
       });
       // eslint-disable-next-line no-undef
