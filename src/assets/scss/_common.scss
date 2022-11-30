@@ -198,6 +198,21 @@ table{
   display: table;
 }
 
+.modal-default{
+  .modal-body{
+    padding-top: 30px;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .modal-footer{
+    padding-top: 0;
+    border-top:0;
+  }
+}
 .modal-footer{
   justify-content: center;
   >button{min-width: 100px;}
