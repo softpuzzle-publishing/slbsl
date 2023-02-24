@@ -1,27 +1,27 @@
 @font-face {
   font-family: "Aventa";
   font-weight: 300;
-  src: url("/src/html/webview/font/aventa/Aventa-Light.ttf") format("truetype");
+  src: url("/src/html/webview/fonts/aventa/Aventa-Light.ttf") format("truetype");
 }
 @font-face {
   font-family: "Aventa";
   font-weight: 400;
-  src: url("/src/html/webview/font/aventa/Aventa-Regular.ttf") format("truetype");
+  src: url("/src/html/webview/fonts/aventa/Aventa-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Aventa";
   font-weight: 500;
-  src: url("/src/html/webview/font/aventa/Aventa-Medium.ttf") format("truetype");
+  src: url("/src/html/webview/fonts/aventa/Aventa-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "Aventa";
   font-weight: 700;
-  src: url("/src/html/webview/font/aventa/Aventa-Bold.ttf") format("truetype");
+  src: url("/src/html/webview/fonts/aventa/Aventa-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Aventa";
   font-weight: 900;
-  src: url("/src/html/webview/font/aventa/Aventa-Black.ttf") format("truetype");
+  src: url("/src/html/webview/fonts/aventa/Aventa-Black.ttf") format("truetype");
 }
 @font-face {
   font-family: "NanumSquare";
@@ -71,7 +71,8 @@ img {
 .details-main-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   vertical-align: top;
 }
 
@@ -107,7 +108,8 @@ img {
 .details-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .product {
@@ -141,7 +143,8 @@ img {
 .product .product-list .thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .product .product-list .title {
   margin: 10px 0 0;
