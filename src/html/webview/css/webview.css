@@ -20,13 +20,23 @@
 }
 @font-face {
   font-family: "Aventa";
-  font-weight: 700;
-  src: url("/src/html/webview/font/aventa/Aventa-ExtraBold.ttf") format("truetype");
+  font-weight: 900;
+  src: url("/src/html/webview/font/aventa/Aventa-Black.ttf") format("truetype");
 }
 @font-face {
-  font-family: "NanumSquareOTFB";
+  font-family: "NanumSquare";
   font-weight: 400;
-  src: url("/src/html/webview/font/NanumSquare/NanumSquareOTFB.otf") format("truetype");
+  src: url("../fonts/NanumSquare/NanumSquareRegular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 700;
+  src: url("../fonts/NanumSquare/NanumSquareBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 900;
+  src: url("../fonts/NanumSquare/NanumSquareExtraBold.ttf") format("truetype");
 }
 * {
   margin: 0;
@@ -38,9 +48,12 @@ body {
   margin: 0;
 }
 
-.wrap {
+img {
+  max-width: 100%;
+}
+
+.details-wrap {
   margin: 0;
-  width: 100%;
   height: 100%;
   background-color: #000;
 }
@@ -48,161 +61,142 @@ body {
 .header {
   margin: 0 0 10px 20px;
 }
-.header h1 {
-  width: 100%;
-  font-family: Aventa;
+.header .header-title {
+  font-family: "Aventa";
   font-size: 30px;
   font-weight: 900;
   color: #fff;
 }
 
-.main-img {
-  margin-bottom: 20px;
-  width: 100%;
-}
-.main-img img {
+.details-main-img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+  vertical-align: top;
 }
 
-.title .title-text {
-  width: 100%;
-  padding: 0 20px 10px 20px;
-  font-family: Aventa;
+.details-info {
+  padding: 20px;
+}
+.details-info .details-title {
+  font-family: "Aventa";
   font-size: 24px;
   font-weight: 900;
   line-height: 1.25;
   letter-spacing: normal;
   color: #fff;
 }
-.title .title-date {
-  width: 100%;
-  padding: 0 0 20px 20px;
-  font-family: Aventa;
+.details-info .details-date {
+  font-family: "Aventa";
+  margin-top: 10px;
   font-size: 14px;
   font-weight: 900;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #fff;
+  margin-top: 10px;
 }
-.title .title-line {
-  width: 100%;
+
+.line {
   height: 2px;
-  padding: 0 20px;
+  background-color: #fff;
+  margin: 0 20px;
 }
-.title .title-line .line {
+
+.details-img {
+  margin-bottom: 30px;
+}
+.details-img img {
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  object-fit: cover;
 }
 
-.production-title {
+.product {
+  margin-bottom: 30px;
+}
+.product .product-title {
   color: #fff;
-  margin-left: 20px;
+  padding: 0 20px;
   font-size: 22px;
   font-weight: 900;
-  font-family: Aventa;
+  font-family: "Aventa";
+  margin-bottom: 20px;
+}
+.product .product-list {
+  padding: 0 20px;
+}
+.product .product-list ul {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+.product .product-list ul li {
+  flex: 0 0 200px;
+  max-width: 200px;
+}
+.product .product-list .thumb {
+  height: 200px;
+}
+.product .product-list .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product .product-list .title {
+  margin: 10px 0 0;
+  font-family: "Aventa";
+  font-size: 12px;
+  font-weight: 900;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.25;
+  max-height: 2.5em;
 }
 
-.button-shop {
-  margin-top: 30px;
+.button {
   padding: 0 20px 30px 20px;
 }
-.button-shop .button-text {
+.button button {
   border: 0;
   width: 100%;
   height: 50px;
-  background-color: #d2c8ff;
   text-align: center;
   line-height: 50px;
-}
-.button-shop .button-text a {
-  font-family: Aventa;
+  font-family: "Aventa", "NanumSquare";
   font-size: 20px;
   font-weight: 900;
   text-align: center;
   color: #000;
   text-decoration: none;
 }
-
-.button-event {
-  padding: 0 20px 30px 20px;
+.button button.btn-purple {
+  background-color: #d2c8ff;
 }
-.button-event .button-text {
-  border: 0;
-  width: 100%;
-  height: 50px;
+.button button.btn-blue {
   background-color: #00ddf2;
-  text-align: center;
-  line-height: 50px;
-}
-.button-event .button-text a {
-  font-family: NanumSquareOTFEB;
-  font-size: 16px;
-  line-height: 1.38;
-  letter-spacing: normal;
-  text-align: center;
-  color: #000;
-  text-decoration: none;
 }
 
 .footer {
-  height: 60px;
   color: #fff;
   text-align: center;
   background-color: #1a1a1a;
+  padding: 16px;
+  line-height: 1;
 }
 .footer img {
-  width: 78px;
   height: 12px;
-  margin-top: 16px;
 }
-.footer .footer-text {
-  margin: 5px 0 16px;
+.footer .copyright {
+  margin: 5px 0 0;
   opacity: 0.5;
-  font-family: Aventa;
+  font-family: "Aventa";
   font-size: 9px;
-  font-weight: 900;
-  color: #fff;
-}
-
-.detail-img {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 100%;
-}
-.detail-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.img-scroll {
-  overflow-x: auto;
-  width: 100%;
-  height: 100%;
-  padding: 20px 20px 10px 20px;
-}
-.img-scroll img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.img-scroll ul {
-  display: flex;
-  gap: 10px;
-}
-.img-scroll .title {
-  width: 200px;
-  margin: 10px 0 0;
-  font-family: Aventa;
-  font-size: 12px;
   font-weight: 900;
   color: #fff;
 }/*# sourceMappingURL=webview.css.map */
