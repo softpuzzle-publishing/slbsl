@@ -160,11 +160,11 @@ img {max-width: 100%}
   color: #fff;
 }
 
-.contents{
+.details-contents{
   margin: 0 20px 20px 20px;
-  :not(:last-child) {
-    margin-bottom: 10px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   img {
   width: 100%; height: 100%; object-fit: cover;
   }
