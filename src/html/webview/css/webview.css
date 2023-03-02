@@ -247,6 +247,8 @@ img {
 
 .details-url {
   padding: 0 20px 127px 20px;
+}
+.details-url a {
   font-family: "NanumSquare";
   font-size: 13px;
   font-weight: 700;
