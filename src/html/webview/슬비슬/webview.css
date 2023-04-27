@@ -1,0 +1,276 @@
+@font-face {
+  font-family: "Aventa";
+  font-weight: 300;
+  src: url("/fonts/aventa/Aventa-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Aventa";
+  font-weight: 400;
+  src: url("/fonts/aventa/Aventa-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Aventa";
+  font-weight: 500;
+  src: url("/fonts/aventa/Aventa-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Aventa";
+  font-weight: 700;
+  src: url("/fonts/aventa/Aventa-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Aventa";
+  font-weight: 900;
+  src: url("/fonts/aventa/Aventa-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 400;
+  src: url("/fonts/NanumSquare/NanumSquareRegular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 700;
+  src: url("/fonts/NanumSquare/NanumSquareBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 900;
+  src: url("/fonts/NanumSquare/NanumSquareExtraBold.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.details-wrap {
+  margin: 0;
+  height: calc(100% - 63px);
+  background-color: #000;
+}
+
+.header {
+  margin: 0 0 10px 20px;
+}
+.header .header-title {
+  font-family: "Aventa";
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.details-main-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: top;
+
+
+}
+
+.details-info {
+  padding: 20px;
+}
+.details-info .details-title {
+  font-family: "Aventa";
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #fff;
+}
+.details-info .details-date {
+  font-family: "Aventa";
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.line {
+  height: 2px;
+  background-color: #fff;
+  margin: 0 20px;
+}
+
+.details-img {
+  margin-bottom: 30px;
+}
+.details-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product {
+  margin-bottom: 30px;
+}
+.product .product-title {
+  color: #fff;
+  padding: 0 20px;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: "Aventa";
+  margin-bottom: 20px;
+}
+.product .product-list {
+  padding: 0 20px;
+}
+.product .product-list ul {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+.product .product-list ul li {
+  flex: 0 0 200px;
+  max-width: 200px;
+}
+.product .product-list .thumb {
+  height: 200px;
+}
+.product .product-list .thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product .product-list .title {
+  margin: 10px 0 0;
+  font-family: "Aventa";
+  font-size: 12px;
+  font-weight: 900;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.25;
+  max-height: 2.5em;
+}
+
+.button {
+  padding: 0 20px 30px 20px;
+}
+.button button {
+  border: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-family: "Aventa", "NanumSquare";
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+}
+.button button.btn-purple {
+  background-color: #d2c8ff;
+  font-weight: 900;
+}
+.button button.btn-blue {
+  background-color: #00ddf2;
+}
+
+.footer {
+  color: #fff;
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 16px;
+  line-height: 1;
+}
+html.theme-pack {
+  height: 100%;
+}
+html.theme-pack body {
+  width: 100%;height: 100%;overflow: hidden;
+}
+html.theme-pack .wrap {
+  height: 100%;display: flex;flex-direction: column;
+}
+html.theme-pack .wrap .details-wrap{
+  flex-grow: 1;display: flex; flex-direction:column; justify-content: center; align-items: center; text-align: center;
+}
+html.theme-pack .footer {
+  flex-shrink: 0;
+  background-color: #000;
+}
+.footer img {
+  height: 12px;
+}
+.footer .copyright {
+  margin: 5px 0 0;
+  opacity: 0.5;
+  font-family: "Aventa";
+  font-size: 9px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.top {
+  padding: 10px 0 0 20px;
+}
+.top .top-title {
+  font-family: "NanumSquare";
+  font-weight: 900;
+  color: #fff;
+  font-size: 16px;
+}
+.top .top-date {
+  margin-top: 10px;
+  opacity: 0.6;
+  font-family: "Aventa";
+  font-weight: 900;
+  color: #fff;
+  font-size: 12px;
+}
+
+.details-text {
+  margin: 30px 20px 20px 20px;
+  font-family: "NanumSquare";
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.54;
+  color: #fff;
+}
+
+.details-contents {
+  margin: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.details-contents img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.details-url {
+  padding: 0 20px 127px 20px;
+}
+.details-url a {
+  font-family: "NanumSquare";
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.69;
+  color: #199fff;
+}/*# sourceMappingURL=webview.css.map */
